@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class MergeSC : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject prefEggCreep;
+    private Vector3 spawnPos;
     void Start()
     {
-        
+        InvokeRepeating(nameof(SpawnEggCreepling), 0f, 5f);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void SpawnEggCreepling()
     {
-        
+        int tempPosX, tempPosY;
+        tempPosX = Random.Range(-7, 7);
+        tempPosY = Random.Range(-4, 4);
+        spawnPos = new Vector3(tempPosX, tempPosY, 0);
+        Instantiate((prefEggCreep), spawnPos, Quaternion.identity);
     }
 }

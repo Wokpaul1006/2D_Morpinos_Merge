@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d62e8c14a41e842a4f292c3ed2bf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefEggCreep: {fileID: 957734445930720142, guid: 7baac5d348f452047b304d415fb785b5, type: 3}
 --- !u!1 &1944575342
 GameObject:
   m_ObjectHideFlags: 0

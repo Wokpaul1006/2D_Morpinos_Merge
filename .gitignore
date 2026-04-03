@@ -1,6 +1,7 @@
 /Logs
 /Library
 /Temp
+/obj
 /Unity.2D.Common.Runtime.csproj
 /Unity.2D.IK.Editor.csproj
 /Unity.2D.IK.Runtime.csproj
