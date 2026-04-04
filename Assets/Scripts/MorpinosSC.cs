@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class MorpinosSC : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Vector3 mousePos;
+    internal string morpinosName, morpinosStrait;
+    internal int morpinosID;
+    protected virtual void Start()
     {
-        
+        InvokeRepeating(nameof(GetPlayerPos), 0f, 1f);
     }
-
-    // Update is called once per frame
-    void Update()
+    internal void Update()
     {
-        
+        MoveToPos();
+    }
+    internal void MoveToPos()
+    {
+        print(" on move to pos");
+        transform.position = mousePos;
+    }
+    internal void GetPlayerPos()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            print("in mouse pos collect");
+            mousePos = Input.mousePosition;
+        }
     }
 }

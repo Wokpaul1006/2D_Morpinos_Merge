@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\mergesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\mergesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\creepling01sc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\creepling01sc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\egg_creepsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\egg_creepsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\assets\\gencontrolsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\gencontrolsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\scripts\\morpinossc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\morpinossc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Egg_CreepSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Egg_CreepSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Egg_CreepSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Egg_CreepSC.cs",
-              "RelativeToolTip": "Assets\\Egg_CreepSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Title": "MorpinosSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MorpinosSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MorpinosSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MorpinosSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MorpinosSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T08:19:42.887Z",
+              "WhenOpened": "2026-04-04T09:13:49.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MergeSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\MergeSC.cs",
-              "RelativeDocumentMoniker": "Assets\\MergeSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\MergeSC.cs",
-              "RelativeToolTip": "Assets\\MergeSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Title": "Creepling01SC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Creepling01SC.cs",
+              "RelativeDocumentMoniker": "Assets\\Creepling01SC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Creepling01SC.cs",
+              "RelativeToolTip": "Assets\\Creepling01SC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T08:10:08.754Z",
+              "WhenOpened": "2026-04-04T09:13:30.549Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GenControlSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\GenControlSC.cs",
-              "RelativeDocumentMoniker": "Assets\\GenControlSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\GenControlSC.cs",
-              "RelativeToolTip": "Assets\\GenControlSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T08:08:27.242Z"
             }
           ]
         }

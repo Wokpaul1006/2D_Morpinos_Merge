@@ -1,53 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\mergesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\mergesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\assets\\gencontrolsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\gencontrolsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MergeSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\MergeSC.cs",
-              "RelativeDocumentMoniker": "Assets\\MergeSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\MergeSC.cs",
-              "RelativeToolTip": "Assets\\MergeSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T08:10:08.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GenControlSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\GenControlSC.cs",
-              "RelativeDocumentMoniker": "Assets\\GenControlSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\GenControlSC.cs",
-              "RelativeToolTip": "Assets\\GenControlSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T08:08:27.242Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
