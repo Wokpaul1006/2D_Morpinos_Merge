@@ -7,25 +7,43 @@ public class MorpinosSC : MonoBehaviour
     Vector3 mousePos;
     internal string morpinosName, morpinosStrait;
     internal int morpinosID;
+    int delayWalk, prepairWalk;
+    Vector3 curPos, targetPosAlly, minPos, maxPos, idlePos;
     protected virtual void Start()
     {
-        InvokeRepeating(nameof(GetPlayerPos), 0f, 1f);
+        delayWalk = 100;
+        prepairWalk = 0;
+        InvokeRepeating(nameof(WalkAround), 1f, 2f);
     }
     internal void Update()
     {
-        MoveToPos();
+        prepairWalk++;
+        if (prepairWalk >= delayWalk)
+        {
+            prepairWalk = 0;
+            WalkAround();
+        }
     }
     internal void MoveToPos()
     {
-        print(" on move to pos");
         transform.position = mousePos;
     }
-    internal void GetPlayerPos()
+    public void WalkAround()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            print("in mouse pos collect");
-            mousePos = Input.mousePosition;
-        }
+        curPos = gameObject.transform.position;
+        targetPosAlly.x = Random.Range(minPos.x, maxPos.x);
+        targetPosAlly.y = Random.Range(minPos.y - 1, maxPos.y + 1);
+        gameObject.transform.position = targetPosAlly;
+    }
+    internal void OnMouseDown()
+    {
+
+    }
+    internal void OnMouseDrag()
+    {
+        print("in draging");
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        print("mouse pos = " + mousePos);
+        transform.position = new Vector3(mousePos.x, mousePos.y, transform.position.z);
     }
 }

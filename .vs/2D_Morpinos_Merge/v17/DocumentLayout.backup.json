@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\scripts\\morpinossc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\morpinossc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MorpinosSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MorpinosSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MorpinosSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MorpinosSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MorpinosSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T11:09:17.329Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
