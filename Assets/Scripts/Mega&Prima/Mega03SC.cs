@@ -8,8 +8,8 @@ public class Mega03SC : MorpinosSC
     void Start()
     {
         morpinosStrait = "Mega";
-        morpinosID = 3;
-        morpinosName = morpinosStrait + morpinosID.ToString();
+        morpinosID = 2;
+        morpinosName = gameObject.name;
         base.Start();
     }
     private void Update()
@@ -18,11 +18,11 @@ public class Mega03SC : MorpinosSC
     }
     internal void OnTriggerEnter2D(Collider2D collision)
     {
-        string colName = collision.gameObject.GetComponent<Creepling01SC>().morpinosName;
+        string colName = collision.gameObject.name;
         if (colName == morpinosName)
         {
+            mergeCtr.OnCallSpawn(4, morpinosID, transform.position.x, transform.position.y);
             Destroy(collision.gameObject);
-            Instantiate(nextStraitToSpawn, transform.position, Quaternion.identity);
         }
     }
 }

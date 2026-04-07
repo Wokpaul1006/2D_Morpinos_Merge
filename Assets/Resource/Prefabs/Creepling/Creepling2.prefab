@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4771466956528730105}
   - component: {fileID: 3965740844124973257}
-  - component: {fileID: 3649145494927550628}
   - component: {fileID: 2344937635229668706}
   - component: {fileID: 7906449846406430853}
+  - component: {fileID: 3985410843608677527}
   m_Layer: 0
   m_Name: Creepling2
   m_TagString: Untagged
@@ -87,7 +87,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3649145494927550628
+--- !u!50 &2344937635229668706
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193272727290704587}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7906449846406430853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193272727290704587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a7d8bb70c5a484fb32afee6ec582e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextStraitToSpawn: {fileID: 3778072166231351156, guid: 70808eb268b74bc4faae0ffc96220ca3, type: 3}
+--- !u!61 &3985410843608677527
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,43 +172,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 3.45}
   m_EdgeRadius: 0
---- !u!50 &2344937635229668706
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2193272727290704587}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &7906449846406430853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2193272727290704587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a7d8bb70c5a484fb32afee6ec582e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextStraitToSpawn: {fileID: 3778072166231351156, guid: 70808eb268b74bc4faae0ffc96220ca3, type: 3}

@@ -359,6 +359,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d62e8c14a41e842a4f292c3ed2bf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creeplingToSpawn:
+  - {fileID: 2193272727290704587, guid: 4ab06d4bb1015b749922c5f2bd1b3ab9, type: 3}
+  - {fileID: 2193272727290704587, guid: 9a75e82d7296b10438d536a226bb5e2f, type: 3}
+  - {fileID: 3778072166231351156, guid: 70808eb268b74bc4faae0ffc96220ca3, type: 3}
+  - {fileID: 272291757816861160, guid: e73f06c9b0d6c544a90d8284ea434888, type: 3}
+  - {fileID: 3337380635281624466, guid: cd7c539b4dce4644caeeef944e330ed5, type: 3}
+  - {fileID: 5712994495176608496, guid: 758f2bebe917b41408557905ee231336, type: 3}
+  - {fileID: 2136864897948053808, guid: 98fe9379d1253684fae77348b4cc5b76, type: 3}
+  - {fileID: 6188481042681230690, guid: d2394f68b9dbe43419f763ca057051a0, type: 3}
+  - {fileID: 1090838651901658064, guid: 15c0650b899a8df46ac371bc320a6928, type: 3}
+  - {fileID: 4820886747559888188, guid: 0bae4ff19cdfd8a45a4f845f19e4eebc, type: 3}
   prefEggCreep: {fileID: 957734445930720142, guid: 7baac5d348f452047b304d415fb785b5, type: 3}
 --- !u!1 &1944575342
 GameObject:

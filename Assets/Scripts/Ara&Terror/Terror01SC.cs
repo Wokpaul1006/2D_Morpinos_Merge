@@ -8,8 +8,8 @@ public class Terror01SC : MorpinosSC
     void Start()
     {
         morpinosStrait = "Ara";
-        morpinosID = 1;
-        morpinosName = morpinosStrait + morpinosID.ToString();
+        morpinosID = 0;
+        morpinosName = gameObject.name;
         base.Start();
     }
     private void Update()
@@ -18,11 +18,11 @@ public class Terror01SC : MorpinosSC
     }
     internal void OnTriggerEnter2D(Collider2D collision)
     {
-        string colName = collision.gameObject.GetComponent<Creepling01SC>().morpinosName;
+        string colName = collision.gameObject.name;
         if (colName == morpinosName)
         {
             Destroy(collision.gameObject);
-            Instantiate(nextStraitToSpawn, transform.position, Quaternion.identity);
+            mergeCtr.OnCallSpawn(2, morpinosID, transform.position.x, transform.position.y);
         }
     }
 }
