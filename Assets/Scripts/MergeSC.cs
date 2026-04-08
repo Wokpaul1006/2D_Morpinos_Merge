@@ -20,7 +20,9 @@ public class MergeSC : MonoBehaviour
     //
     [SerializeField] List<GameObject> gigantToSpawn = new List<GameObject>();
     //
-    [SerializeField] GameObject prefEggCreep;
+    [SerializeField] List<GameObject> prefEggCreep = new List<GameObject>();
+    //
+    [SerializeField] GameObject essensePool;
     private Vector3 spawnPos;
     int pairedCount;
     void Start()
@@ -31,10 +33,10 @@ public class MergeSC : MonoBehaviour
     private void SpawnEggCreepling()
     {
         int tempPosX, tempPosY;
-        tempPosX = Random.Range(-7, 7);
-        tempPosY = Random.Range(-4, 4);
+        tempPosX = Random.Range(-5, 5);
+        tempPosY = Random.Range(-3, 3);
         spawnPos = new Vector3(tempPosX, tempPosY, 0);
-        Instantiate((prefEggCreep), spawnPos, Quaternion.identity);
+        Instantiate((prefEggCreep[0]), spawnPos, Quaternion.identity);
     }
     public void OnCallSpawn(int breedOrder, int objectToSpawn, float posX, float posY)
     {
@@ -46,28 +48,57 @@ public class MergeSC : MonoBehaviour
             switch (breedOrder)
             {
                 case 0:
-                    Instantiate(creeplingToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    //Creepling
+                    if(objectToSpawn >= 10)
+                    {
+                        Instantiate(prefEggCreep[1], spawnPos, Quaternion.identity);
+                    }
+                    else { Instantiate(creeplingToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity); }
                     break;
                 case 1:
-                    Instantiate(araToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    //Ara
+                    if (objectToSpawn >= 5)
+                    {
+                        Instantiate(prefEggCreep[2], spawnPos, Quaternion.identity);
+                    }else                    Instantiate(araToSpawn[objectToSpawn+1], spawnPos, Quaternion.identity);
                     break;
                 case 2:
-                    Instantiate(terrorToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    //Terroling
+                    if (objectToSpawn >= 5)
+                    {
+                        Instantiate(prefEggCreep[2], spawnPos, Quaternion.identity);
+                    }else                    Instantiate(terrorToSpawn[objectToSpawn+1], spawnPos, Quaternion.identity);
                     break;
                 case 3:
-                    Instantiate(drakiToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    //Drakinos
+                    if (objectToSpawn <= 2)
+                    {
+                        Instantiate(drakiToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                    }
                     break;
                 case 4:
-                    Instantiate(megaToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    if (objectToSpawn >= 4)
+                    {
+                        Instantiate(prefEggCreep[3], spawnPos, Quaternion.identity);
+                    }else                    Instantiate(megaToSpawn[objectToSpawn+1], spawnPos, Quaternion.identity);
                     break;
                 case 5:
-                    Instantiate(primaToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    if (objectToSpawn >= 4)
+                    {
+                        Instantiate(prefEggCreep[3], spawnPos, Quaternion.identity);
+                    }else                    Instantiate(primaToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
                     break;
                 case 6:
-                    Instantiate(terraToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    if (objectToSpawn >= 3)
+                    {
+                        Instantiate(essensePool, spawnPos, Quaternion.identity);
+                    }else                     Instantiate(terraToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
                     break;
                 case 7:
-                    Instantiate(gigantToSpawn[objectToSpawn], spawnPos, Quaternion.identity);
+                    if (objectToSpawn >= 3)
+                    {
+                        Instantiate(essensePool, spawnPos, Quaternion.identity);
+                    }else                    Instantiate(gigantToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
                     break;
             }
         }

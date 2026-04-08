@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Creepling01SC : MorpinosSC
 {
-    [SerializeField] GameObject nextStraitToSpawn;
     void Start()
     {
         morpinosStrait = "Creep";

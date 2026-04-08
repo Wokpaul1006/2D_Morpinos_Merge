@@ -370,7 +370,46 @@ MonoBehaviour:
   - {fileID: 6188481042681230690, guid: d2394f68b9dbe43419f763ca057051a0, type: 3}
   - {fileID: 1090838651901658064, guid: 15c0650b899a8df46ac371bc320a6928, type: 3}
   - {fileID: 4820886747559888188, guid: 0bae4ff19cdfd8a45a4f845f19e4eebc, type: 3}
-  prefEggCreep: {fileID: 957734445930720142, guid: 7baac5d348f452047b304d415fb785b5, type: 3}
+  araToSpawn:
+  - {fileID: 1636224497411255910, guid: 98b8cdcf535f3ca4999ae3c2430f2873, type: 3}
+  - {fileID: 9025728082951204850, guid: 51f93eb8bf21f2f44a0e60826fa2a84b, type: 3}
+  - {fileID: 7169791240383343307, guid: d5d1ac453af21624ca8dfa7df8cb1da9, type: 3}
+  - {fileID: 4045279591878090280, guid: 56e18a0b95be51f42aad49a581286a81, type: 3}
+  - {fileID: 8174242173071476808, guid: bee9b23f111e6664db5d072d95272617, type: 3}
+  terrorToSpawn:
+  - {fileID: 7169791240383343307, guid: dc208e5b610e7e34b898952fc6744a5d, type: 3}
+  - {fileID: 9025728082951204850, guid: 88a5b316515c6dd4ab2c429b1ad31137, type: 3}
+  - {fileID: 7169791240383343307, guid: 284da31283d0ebf45951453e2419085b, type: 3}
+  - {fileID: 4045279591878090280, guid: 40dfd901766959b4c8a87d1768308648, type: 3}
+  - {fileID: 8174242173071476808, guid: 9e663f90916f252468e9ba93c95c897d, type: 3}
+  drakiToSpawn:
+  - {fileID: 248403807071780144, guid: eee582c9f9d32f14f800447b9eb98b10, type: 3}
+  - {fileID: 8106994316515734753, guid: 4783f2f179de830488f35fdff125d17d, type: 3}
+  - {fileID: 3602084166105991474, guid: c56049109e75edf46838cde20395ede7, type: 3}
+  megaToSpawn:
+  - {fileID: 7699216930755887904, guid: 378e037ba38bb33458b4ec4b79f11f8b, type: 3}
+  - {fileID: 167765602419869024, guid: a975d5dd4d92d414cb4dedbe40153c28, type: 3}
+  - {fileID: 8033601792545450777, guid: 7e5c3021da67b9b4c8925305f861f226, type: 3}
+  - {fileID: 8297549427371130552, guid: 9aa739d5c9cfefe409f1db16faa8076f, type: 3}
+  primaToSpawn:
+  - {fileID: 7699216930755887904, guid: 1ecf25ae48a47cc48bbdce1d1410a271, type: 3}
+  - {fileID: 167765602419869024, guid: 4b58965168db82a4cb86a51aabd0d117, type: 3}
+  - {fileID: 8033601792545450777, guid: b9024b041f704df4ab57e909045fa895, type: 3}
+  - {fileID: 8297549427371130552, guid: 0bc7f04ca35b93a4a839e3bec403d077, type: 3}
+  terraToSpawn:
+  - {fileID: 6114375854313542956, guid: 02f414b649aa92d47a2ff2f42d3c4ec0, type: 3}
+  - {fileID: 4257661716556574206, guid: 1dadfd1ab7f814f4095ec9c536ea2701, type: 3}
+  - {fileID: 0}
+  gigantToSpawn:
+  - {fileID: 6114375854313542956, guid: a63950b1870b02f4f921d856a63181b7, type: 3}
+  - {fileID: 4257661716556574206, guid: 1b5f4e371b474824d8317c7bec65c48e, type: 3}
+  - {fileID: 1990450479513966787, guid: 9539b8212659a0740ae471b70140a7b4, type: 3}
+  prefEggCreep:
+  - {fileID: 957734445930720142, guid: 7baac5d348f452047b304d415fb785b5, type: 3}
+  - {fileID: 8831706760176078970, guid: bc9dbc7ac4c6b8e4ea4edc864f4234d9, type: 3}
+  - {fileID: 7414776451545197584, guid: edfb1602bc6f0b24eb9a2d78ff034758, type: 3}
+  - {fileID: 5250758634657297771, guid: fc3003d43967e374a8dafec820b76c2b, type: 3}
+  essensePool: {fileID: 836890485040472863, guid: 203dad26047cd994fa044364c64e4109, type: 3}
 --- !u!1 &1944575342
 GameObject:
   m_ObjectHideFlags: 0

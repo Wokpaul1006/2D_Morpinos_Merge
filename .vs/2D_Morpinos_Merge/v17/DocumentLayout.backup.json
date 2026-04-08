@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\scripts\\mergesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mergesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|d:\\projects\\2d project - existium\\2d_morpinos_merge\\assets\\scripts\\morpinossc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625A2E5A-311A-2ECC-4336-FAF0FD7228DE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\morpinossc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MorpinosSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MorpinosSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MorpinosSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MorpinosSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MorpinosSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:40:25.757Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,7 +24,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MergeSC.cs",
               "ToolTip": "D:\\Projects\\2D Project - Existium\\2D_Morpinos_Merge\\Assets\\Scripts\\MergeSC.cs",
               "RelativeToolTip": "Assets\\Scripts\\MergeSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwDAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T06:33:54.582Z",
               "EditorCaption": ""
