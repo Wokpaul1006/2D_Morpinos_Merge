@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class PlayerInforSC : MonoBehaviour
 {
-    [SerializeField] Text pName, pTotalBattle, pTotalMoney, pClanName, pStoryLevel;
+    [SerializeField] Text pName, pStrenght, pPlanetConquer, pMoney, pGems;
     [HideInInspector] DataSC data;
     private void Awake()
     {
-        data = GameObject.Find("GeneralControlMN").GetComponent<DataSC>();
+        data = GameObject.Find("GenMN").GetComponent<DataSC>();
     }
     private void OnEnable()
     {
-        pTotalMoney.text = data.pTotalScore.ToString();
+        pName.text = "Morpinos Swarm";
+        pStrenght.text = data.pTotalScore.ToString();
+        pPlanetConquer.text = 0.ToString();
+        pMoney.text = data.pCoin.ToString();
+        pGems.text = data.pGems.ToString();
     }
 }

@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneSC : Singleton<SceneSC>
 {
-    private void Start() { }
+    GenControlSC genCtr;
+    private void Start() 
+    {
+        genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
+    }
     public void LoadScene(int sceneOder)
     {
         switch (sceneOder)
@@ -14,7 +18,13 @@ public class SceneSC : Singleton<SceneSC>
                 SceneManager.LoadScene("00_LoadScene");
                 break;
             case 1:
+                if (genCtr.gameObject == null)
+                {
+                    print("GenCtr non found");
+                }
+                else print(genCtr.gameObject.name);
                 SceneManager.LoadScene("01_MainScene");
+                genCtr.OnAssistElements(1);
                 break;
             case 2:
                 SceneManager.LoadScene("02_ConquerScene");

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Egg_CreepSC : MonoBehaviour
 {
+    [HideInInspector] MergeSC mergCtr;
     int countToHatch;
     [SerializeField] int eggStraitTier;
     [SerializeField] GameObject creepling, arachiling, terrorling, megarhinos, primanos, gigantinos, terranos, drakinos;
@@ -13,6 +14,7 @@ public class Egg_CreepSC : MonoBehaviour
     [HideInInspector] int eggStraitDNA;
     void Start()
     {
+        mergCtr = GameObject.Find("MergeMN").GetComponent<MergeSC>();
         countToHatch = 0;
         hatchProgress.fillAmount = 0;
     }
@@ -75,6 +77,7 @@ public class Egg_CreepSC : MonoBehaviour
     private void SpawnCreepling()
     {
         Instantiate(creepling, gameObject.transform.position, Quaternion.identity);
+        mergCtr.OnCountCurrentPower();
         Destroy(gameObject);
     }
     private void SpawnAra()

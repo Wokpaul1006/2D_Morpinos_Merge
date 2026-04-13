@@ -13,7 +13,7 @@ public class LoadSC : MonoBehaviour
     private float loadSpd;
     void Start()
     {
-        sceneMN = new SceneSC();
+        sceneMN = GameObject.Find("GenMN").GetComponent<SceneSC>();
         SetupStart();
         StartCoroutine(RunLoad());
     }

@@ -158,6 +158,10 @@ public class DataSC : MonoBehaviour
     }
     #endregion
 
+    #region Update Morpinos
+    
+    #endregion
+
     #region Checking Zone
     private bool CheckFirstPlay()
     {

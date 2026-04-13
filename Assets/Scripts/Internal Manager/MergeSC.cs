@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MergeSC : MonoBehaviour
 {
+    [HideInInspector] GenControlSC genCtr;
+
     [SerializeField] List<GameObject> creeplingToSpawn = new List<GameObject>();
     //
     [SerializeField] List<GameObject> araToSpawn = new List<GameObject>();
@@ -24,9 +26,10 @@ public class MergeSC : MonoBehaviour
     //
     [SerializeField] GameObject essensePool;
     private Vector3 spawnPos;
-    int pairedCount;
+    int pairedCount, curPower;
     void Start()
     {
+        genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
         InvokeRepeating(nameof(SpawnEggCreepling), 0f, 5f);
         pairedCount = 0;
     }
@@ -102,5 +105,9 @@ public class MergeSC : MonoBehaviour
                     break;
             }
         }
+    }
+    public void OnCountCurrentPower()
+    {
+        genCtr.IncreaseCurPower();
     }
 }

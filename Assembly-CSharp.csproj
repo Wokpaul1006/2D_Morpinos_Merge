@@ -83,8 +83,8 @@
     <Compile Include="Assets\Scripts\Internal Manager\GenControlSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Prima02SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Prima01SC.cs" />
-    <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror04SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara05SC.cs" />
+    <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror04SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep08SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\DNAVitalSC.cs" />
@@ -102,9 +102,9 @@
     <Compile Include="Assets\Scripts\Internal Manager\SoundSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Gigant01SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos02.cs" />
-    <Compile Include="Assets\MenuMN.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega03SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep07SC.cs" />
+    <Compile Include="Assets\Scripts\MenuMN.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos03.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep04SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara02.cs" />

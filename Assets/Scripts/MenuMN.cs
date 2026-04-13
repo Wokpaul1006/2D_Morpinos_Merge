@@ -7,11 +7,13 @@ public class MenuMN : MonoBehaviour
 {
     [SerializeField] List<GameObject> uiPanels = new List<GameObject>();
     [HideInInspector] DataSC dataCtr;
+    [HideInInspector] GenControlSC genCtr;
 
     [SerializeField] Text curMoney, curGems, curPower;
     [SerializeField] Text curSpawnBoost, curSpawnAmount;
     void Start()
     {
+        genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
         HideAllPanels();
     }
     void HideAllPanels()
@@ -21,17 +23,12 @@ public class MenuMN : MonoBehaviour
             uiPanels[i].gameObject.SetActive(false);
         }
     }
-    void HidePanel(int panelOrder)
+    public void HidePanel(int panelOrder) => uiPanels[panelOrder].gameObject.SetActive(false);
+    public void OnShowPanel(int panelOrder) => uiPanels[panelOrder].gameObject.SetActive(true);
+    public void OnCallShowSetting() => genCtr.OnShowSetting(true);
+    public void OnUpdateCurPowerUI(int value)
     {
-
-    }
-    void OnShowPanel(int panelOrder)
-    {
-
-    }
-    void OnUpdateUI()
-    {
-
+        curPower.text = value.ToString();
     }
     public void OnGoesTogames(int value)
     {
