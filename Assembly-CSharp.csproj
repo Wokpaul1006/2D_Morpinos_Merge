@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega03SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep07SC.cs" />
     <Compile Include="Assets\Scripts\MenuMN.cs" />
+    <Compile Include="Assets\Scripts\TipsSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos03.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep04SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara02.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep05SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\SettingSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara03SC.cs" />
+    <Compile Include="Assets\ConquerSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Gigant02SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\EssensePoolSC.cs" />

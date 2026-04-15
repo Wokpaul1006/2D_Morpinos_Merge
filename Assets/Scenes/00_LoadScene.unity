@@ -1340,7 +1340,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneMN: {fileID: 434602139}
   loadSlide: {fileID: 877558181}
-  loadTips: {fileID: 1465009139}
 --- !u!1 &313440272
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,6 +5318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TXT_Tips
       objectReference: {fileID: 0}
+    - target: {fileID: 6138113265063956288, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5429,17 +5432,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1465009137}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1465009139 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
-  m_PrefabInstance: {fileID: 1465009137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1487445757
 GameObject:
   m_ObjectHideFlags: 0
@@ -7436,5 +7428,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 228054260}
   - {fileID: 306424796}
-  - {fileID: 1139496583}
   - {fileID: 434602136}
+  - {fileID: 1139496583}

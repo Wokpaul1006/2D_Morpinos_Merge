@@ -10,8 +10,10 @@ public class GenControlSC : MonoBehaviour
     [SerializeField] SettingSC settingCtr;
     [SerializeField] PlayerInforSC inforCtr;
     [SerializeField] CreditSC credtCr;
+    [SerializeField] SceneSC sceneCtr;
 
     [HideInInspector] MenuMN menuCtr;
+    [HideInInspector] ConquerSC conquerCtr;
     void Start()
     {
         curPower = dataCtr.pTotalScore;
@@ -31,6 +33,9 @@ public class GenControlSC : MonoBehaviour
         if (sceneOrder == 1)
         {
             Invoke(nameof(AssistMenuCtr), 1f);
+        }else if(sceneOrder == 2)
+        {
+            Invoke(nameof(AssistConquerCtr), 1f);
         }
     }
     private void AssistMenuCtr() 
@@ -38,7 +43,13 @@ public class GenControlSC : MonoBehaviour
         menuCtr = GameObject.Find("CAN_MainCan").GetComponent<MenuMN>();
         menuCtr.OnUpdateCurPowerUI(curPower);
     }
+    private void AssistConquerCtr()
+    {
+        conquerCtr = GameObject.Find("ConquerMN").GetComponent<ConquerSC>(); 
+    }
     public void OnShowSetting(bool isShow) => settingCtr.gameObject.SetActive(isShow);
     public void OnShowInfor(bool isShow) => inforCtr.gameObject.SetActive(isShow);
     public void OnShowCredits(bool isShow) => credtCr.gameObject.SetActive(isShow);
+    public void OnGoesToHatchery() => sceneCtr.LoadScene(1);
+    public void OnGoesToConquer() => sceneCtr.LoadScene(2);
 }

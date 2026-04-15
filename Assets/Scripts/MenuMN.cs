@@ -14,7 +14,9 @@ public class MenuMN : MonoBehaviour
     void Start()
     {
         genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
+        dataCtr = GameObject.Find("GenMN").GetComponent<DataSC>();
         HideAllPanels();
+        OnUpdateUI();
     }
     void HideAllPanels()
     {
@@ -30,6 +32,13 @@ public class MenuMN : MonoBehaviour
     {
         curPower.text = value.ToString();
     }
+    public void OnUpdateUI()
+    {
+        curMoney.text = dataCtr.pCoin.ToString();
+        curGems.text = dataCtr.pGems.ToString();
+        curSpawnBoost.text = "1";
+        curSpawnAmount.text = "1";
+    }
     public void OnGoesTogames(int value)
     {
         switch(value)
@@ -44,5 +53,9 @@ public class MenuMN : MonoBehaviour
                 Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.AgeOfCkauz&");
                 break;
         }
+    }
+    public void OnToConquer()
+    {
+        genCtr.OnGoesToConquer();
     }
 }
