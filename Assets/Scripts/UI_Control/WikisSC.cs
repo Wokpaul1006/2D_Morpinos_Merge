@@ -69,15 +69,15 @@ public class WikisSC : MonoBehaviour
         specieURL = "https://sadekgame.wordpress.com/2025/02/27/morpinos/";
         eggyURL = "https://sadekgame.wordpress.com/2026/04/06/unit-eggy-existium-universe/";
         creepURL = "https://sadekgame.wordpress.com/2024/08/16/creepling/";
-        araURL = "https://sadekgame.wordpress.com/2024/08/16/armored-arachiling/";
-        terrorURL = "https://sadekgame.wordpress.com/2026/01/19/unit-terrorling-morpinos-existium-wiki/";
+        araURL = "https://sadekgame.wordpress.com/2024/08/16/arachiling/";
+        terrorURL = "https://sadekgame.wordpress.com/2026/01/19/terrorling/";
         megaURL = "https://sadekgame.wordpress.com/2024/08/16/megarhino/";
-        primaURL = "https://sadekgame.wordpress.com/2024/08/16/knucleape/\r\n";
-        drakiURL = "https://sadekgame.wordpress.com/2024/08/16/dinoflakk/";
-        gigantURL = "https://sadekgame.wordpress.com/2026/04/06/unit-gigantinos-existium-universe/\r\n";
-        terraURL = "https://sadekgame.wordpress.com/2026/04/06/unit-terrainos-existium-universe/";
-        hivemindURL = "https://sadekgame.wordpress.com/2026/01/19/struct-overhive-ipm-existium-codex/";
-        essenseSphereURL = "https://sadekgame.wordpress.com/2025/10/31/wiki-struct-essence-well-2/";
-        nuclepinosURL = "https://sadekgame.wordpress.com/2026/04/14/struct-nuclepinos-existium-wiki/";
+        primaURL = "https://sadekgame.wordpress.com/2024/08/16/primanos/";
+        drakiURL = "https://sadekgame.wordpress.com/2024/08/16/drakinos/";
+        gigantURL = "https://sadekgame.wordpress.com/2026/04/06/gigantinoS/";
+        terraURL = "https://sadekgame.wordpress.com/2026/04/06/TERRANOS";
+        hivemindURL = "https://sadekgame.wordpress.com/2026/01/19/morpinos-imperatos/";
+        essenseSphereURL = "https://sadekgame.wordpress.com/2025/10/31/morpinos-genopinos/";
+        nuclepinosURL = "https://sadekgame.wordpress.com/2026/04/14/morpinos-nuclepinos/";
     }
 }

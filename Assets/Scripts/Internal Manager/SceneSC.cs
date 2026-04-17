@@ -18,11 +18,6 @@ public class SceneSC : Singleton<SceneSC>
                 SceneManager.LoadScene("00_LoadScene");
                 break;
             case 1:
-                if (genCtr.gameObject == null)
-                {
-                    print("GenCtr non found");
-                }
-                else print(genCtr.gameObject.name);
                 SceneManager.LoadScene("01_MainScene");
                 genCtr.OnAssistElements(1);
                 break;

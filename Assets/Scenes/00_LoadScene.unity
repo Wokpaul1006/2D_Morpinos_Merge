@@ -1785,6 +1785,7 @@ GameObject:
   - component: {fileID: 434602137}
   - component: {fileID: 434602139}
   - component: {fileID: 434602138}
+  - component: {fileID: 434602140}
   m_Layer: 0
   m_Name: GenMN
   m_TagString: Untagged
@@ -1825,6 +1826,7 @@ MonoBehaviour:
   settingCtr: {fileID: 680531113}
   inforCtr: {fileID: 418169056}
   credtCr: {fileID: 765985784}
+  sceneCtr: {fileID: 434602139}
 --- !u!114 &434602138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,6 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deviceID: 
   isFirstPlay: 0
+  saveSys: {fileID: 434602140}
   pSFX: 0
   pTheme: 0
   pGems: 0
@@ -1899,6 +1902,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDestroyOnLoad: 0
+--- !u!114 &434602140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434602135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d212a38aacd594ea92bfb756a1f52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &438255078
 GameObject:
   m_ObjectHideFlags: 0

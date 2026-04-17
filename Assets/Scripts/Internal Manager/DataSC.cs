@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class DataSC : MonoBehaviour
     [HideInInspector] PlayerInforSC infor;
     public string deviceID;
     public bool isFirstPlay;
+
+    [SerializeField] SaveSystem saveSys;
 
     //Shared variables
     [HideInInspector] public int pSFX, pTheme;
@@ -22,7 +25,9 @@ public class DataSC : MonoBehaviour
 
     //Morpinos Evolution Exclusive Vars
     [HideInInspector] public int pTotalScore; //total Morpinos was born, count on Creepling as base units
-    [HideInInspector] public int pCreep0, pCreep1, pCreep2, pCreep3, pCreep4, pCreep6, pCreep7, pCreep8, pCreep9;
+    [HideInInspector] public int pMorpinosOrder;
+
+    [HideInInspector] public int pCreep0, pCreep1, pCreep2, pCreep3, pCreep4, pCreep5, pCreep6, pCreep7, pCreep8, pCreep9;
     [HideInInspector] public int pAra0, pAra1, pAra2, pAra3, pAra4S;
     [HideInInspector] public int pTerror0, pTerror1, pTerror2, pTerror3, pTerror4;
     [HideInInspector] public int pDraki0, pDraki1, pDraki2;
@@ -35,8 +40,19 @@ public class DataSC : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        //PlayerPrefs.DeleteAll();
         SettingStart();
+    }
+    public void Start()
+    {
+        MorpinosData dataLoad = saveSys.Load();
+        if (dataLoad != null)
+        {
+            for (int i = 0; i < dataLoad.creeplingOnScreen.Length; i++)
+            {
+                print(dataLoad.creeplingOnScreen[i]);
+            }
+
+        }
     }
 
     #region Local Handle
@@ -65,6 +81,7 @@ public class DataSC : MonoBehaviour
         PlayerPrefs.SetInt("Highscore", 0); //For total overview, leaderboard
         PlayerPrefs.SetInt("Totalscore", 0); //Actual player in-game currency
         PlayerPrefs.SetInt("TotalGems", 0); //Player's PIA currency
+        PlayerPrefs.SetInt("TotalCoin", 0);
 
         PlayerPrefs.SetInt("soundState", 1);
         PlayerPrefs.SetInt("sfxState", 1);
@@ -96,6 +113,7 @@ public class DataSC : MonoBehaviour
     {
         pTotalScore = PlayerPrefs.GetInt("Totalscore");
         pGems = PlayerPrefs.GetInt("TotalGems");
+        pCoin = PlayerPrefs.GetInt("TotalCoin");
         pTheme = PlayerPrefs.GetInt("soundState");
         pSFX = PlayerPrefs.GetInt("sfxState");
 
@@ -119,6 +137,8 @@ public class DataSC : MonoBehaviour
     #endregion
 
     #region Data Update
+
+    //Economic
     public void UpdateTotalScore(int currencyToPlus)
     {
         int tempTotalScore;
@@ -131,6 +151,13 @@ public class DataSC : MonoBehaviour
         PlayerPrefs.SetInt("TotalGems", gems);
         pGems = PlayerPrefs.GetInt("TotalGems");
     }
+    public void UpdateTotalCoin(int coin)
+    {
+        PlayerPrefs.SetInt("TotalCoin", coin);
+        pCoin = PlayerPrefs.GetInt("TotalCoin");
+    }
+
+    //Sound
     public void UpdateSFXState(int sfxState)
     {
         PlayerPrefs.SetInt("sfxState", sfxState);
@@ -141,6 +168,8 @@ public class DataSC : MonoBehaviour
         PlayerPrefs.SetInt("soundState", thameState);
         pTheme = PlayerPrefs.GetInt("soundState");
     }
+
+    //Patrol Reward
     public void UpdatePatrolDailyReward(string lastPatrolDaily)
     {
         PlayerPrefs.SetString("LastPatrolDailyTime", lastPatrolDaily);
@@ -156,6 +185,9 @@ public class DataSC : MonoBehaviour
         PlayerPrefs.SetInt("PatrolDailyStreak", value);
         pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
     }
+
+    //Gameplay
+
     #endregion
 
     #region Update Morpinos
@@ -166,11 +198,53 @@ public class DataSC : MonoBehaviour
     private bool CheckFirstPlay()
     {
         //print("FirstPlay: " + PlayerPrefs.GetInt("HasPlayed"));
-        if (PlayerPrefs.GetInt("HasPlayed") == 1)
-        {
-            return isFirstPlay = false;
-        }
+        if (PlayerPrefs.GetInt("HasPlayed") == 1) return isFirstPlay = false;
         else return true;
     }
     #endregion
+
+    public void AutoSaveMorpinos()
+    {
+        SaveCreep();
+        SaveAra();
+        SaveTerror();
+        SavePrima();
+        SaveMega();
+        SaveGigant();
+        SaveTerra();
+        SaveDraki();
+    }
+    private void SaveCreep()
+    {
+        int[] a = { pCreep0, pCreep1, pCreep2, pCreep3, pCreep4, pCreep5, pCreep6, pCreep7, pCreep8, pCreep9 };
+        saveSys.OnSaveCreep(a);
+    }
+    private void SaveAra() 
+    {
+
+    }
+    private void SaveTerror()
+    {
+
+    }
+    private void SaveMega()
+    {
+
+    }
+    private void SavePrima()
+    {
+
+    }
+    private void SaveGigant()
+    {
+
+    }
+    private void SaveTerra()
+    {
+
+    }
+    private void SaveDraki()
+    {
+
+    }
 }
