@@ -28,7 +28,7 @@ public class DataSC : MonoBehaviour
     [HideInInspector] public int pMorpinosOrder;
 
     [HideInInspector] public int pCreep0, pCreep1, pCreep2, pCreep3, pCreep4, pCreep5, pCreep6, pCreep7, pCreep8, pCreep9;
-    [HideInInspector] public int pAra0, pAra1, pAra2, pAra3, pAra4S;
+    [HideInInspector] public int pAra0, pAra1, pAra2, pAra3, pAra4;
     [HideInInspector] public int pTerror0, pTerror1, pTerror2, pTerror3, pTerror4;
     [HideInInspector] public int pDraki0, pDraki1, pDraki2;
     [HideInInspector] public int pMega0, pMega1, pMega2, pMega3;
@@ -45,14 +45,6 @@ public class DataSC : MonoBehaviour
     public void Start()
     {
         MorpinosData dataLoad = saveSys.Load();
-        if (dataLoad != null)
-        {
-            for (int i = 0; i < dataLoad.creeplingOnScreen.Length; i++)
-            {
-                print(dataLoad.creeplingOnScreen[i]);
-            }
-
-        }
     }
 
     #region Local Handle
@@ -123,6 +115,11 @@ public class DataSC : MonoBehaviour
         pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
 
         //Gameplay
+        OnLoadMorpinos();
+    }
+    private void OnLoadMorpinos()
+    {
+        
     }
     public void DataDelete()
     {
@@ -191,7 +188,206 @@ public class DataSC : MonoBehaviour
     #endregion
 
     #region Update Morpinos
-    
+    public void OnUpdateCreepling(int breedOrder)
+    {
+        switch (breedOrder)
+        {
+            case 0:
+                pCreep0 += 1;
+                break;
+            case 1:
+                pCreep0 -= 2;
+                pCreep1 += 1;
+                break;
+            case 2:
+                pCreep1 -= 2;
+                pCreep2 += 1;
+                break;
+            case 3:
+                pCreep2 -= 2;
+                pCreep3 += 1;
+                break;
+            case 4:
+                pCreep3 -= 2;
+                pCreep4 += 1;
+                break;
+            case 5:
+                pCreep4 -= 2;
+                pCreep5 += 1;
+                break;
+            case 6:
+                pCreep5 -= 2;
+                pCreep6 += 1;
+                break;
+            case 7:
+                pCreep6 -= 2;
+                pCreep7 += 1;
+                break;
+            case 8:
+                pCreep7 -= 2;
+                pCreep8 += 1;
+                break;
+            case 9:
+                pCreep8 -= 2;
+                pCreep9 += 1;
+                break;
+            case 10:
+                pCreep9 -= 2;
+                break;
+        }
+    }
+    public void OnUpdateDataTier2(int breedOrder, int breedSubOrder)
+    {
+        if (breedOrder == 0)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pAra0 += 1;
+                    break;
+                case 1:
+                    pAra0 -= 2;
+                    pAra1 += 1;
+                    break;
+                case 2:
+                    pAra1 -= 2;
+                    pAra2 += 1;
+                    break;
+                case 3:
+                    pAra2 -= 2;
+                    pAra3 += 1;
+                    break;
+                case 4:
+                    pAra3 -= 2;
+                    pAra4 += 1;
+                    break;
+            }
+        }
+        else if (breedOrder == 1)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pTerror0 += 1;
+                    break;
+                case 1:
+                    pTerror0 -= 2;
+                    pTerror1 += 1;
+                    break;
+                case 2:
+                    pTerror1 -= 2;
+                    pTerror2 += 1;
+                    break;
+                case 3:
+                    pTerror2 -= 2;
+                    pTerror3 += 1;
+                    break;
+                case 4:
+                    pTerror3 -= 2;
+                    pTerror4 += 1;
+                    break;
+            }
+        }
+        else if (breedOrder == 2)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pDraki0 += 1;
+                    break;
+                case 1:
+                    pDraki0 -= 2;
+                    pDraki1 += 1;
+                    break;
+                case 2:
+                    pDraki1 -= 2;
+                    pDraki2 += 1;
+                    break;
+            }
+        }
+    }
+    public void OnUpdateDataTier3(int breedOrder, int breedSubOrder)
+    {
+        if (breedOrder == 0)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pMega0 += 1;
+                    break;
+                case 1:
+                    pMega0 -= 2;
+                    pMega1 += 1;
+                    break;
+                case 2:
+                    pMega1 -= 2;
+                    pMega2 += 1;
+                    break;
+                case 3:
+                    pMega2 -= 2;
+                    pMega3 += 1;
+                    break;
+            }
+        }
+        else if (breedOrder == 1)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pPrima0 += 1;
+                    break;
+                case 1:
+                    pPrima0 -= 2;
+                    pPrima1 += 1;
+                    break;
+                case 2:
+                    pPrima1 -= 2;
+                    pPrima2 += 1;
+                    break;
+                case 3:
+                    pPrima2 -= 2;
+                    pPrima3 += 1;
+                    break;
+            }
+        }
+    }
+    public void OnUpdateDataTier4(int breedOrder, int breedSubOrder)
+    {
+        if (breedOrder == 0)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pGigan0 += 1;
+                    break;
+                case 1:
+                    pGigan0 -= 2;
+                    pGigan1 += 1;
+                    break;
+                case 2:
+                    pGigan1 -= 2;
+                    pGigan2 += 1;
+                    break;
+            }
+        }
+        else if (breedOrder == 1)
+        {
+            switch (breedSubOrder)
+            {
+                case 0:
+                    pTerra0 += 1;
+                    break;
+                case 1:
+                    pTerra0 -= 2;
+                    pTerra1 += 1;
+                    break;
+                case 2:
+                    pTerra1 -= 2;
+                    pTerra2 += 1;
+                    break;
+            }
+        }
+    }
     #endregion
 
     #region Checking Zone
@@ -203,6 +399,7 @@ public class DataSC : MonoBehaviour
     }
     #endregion
 
+    #region Save to JSON
     public void AutoSaveMorpinos()
     {
         SaveCreep();
@@ -221,30 +418,38 @@ public class DataSC : MonoBehaviour
     }
     private void SaveAra() 
     {
-
+        int[] a = { pAra0, pAra1, pAra2, pAra3, pAra4 };
+        saveSys.OnSaveAra(a);
     }
     private void SaveTerror()
     {
-
+        int[] a = { pTerror0, pTerror1, pTerror2, pTerror3, pTerror4 };
+        saveSys.OnSaveTerror(a);
     }
     private void SaveMega()
     {
-
+        int[] a = {pMega0, pMega1, pMega2, pMega3 };
+        saveSys.OnSaveMega(a);
     }
     private void SavePrima()
     {
-
+        int[] a = { pPrima0, pPrima1, pPrima2, pPrima3 };
+        saveSys.OnSavePrima(a);
     }
     private void SaveGigant()
     {
-
+        int[] a = { pGigan0, pGigan1, pGigan2 };
+        saveSys.OnSaveGigant(a);
     }
     private void SaveTerra()
     {
-
+        int[] a = { pTerra0, pTerra1, pTerra2 };
+        saveSys.OnSaveTerra(a);
     }
     private void SaveDraki()
     {
-
+        int[] a = { pDraki0, pDraki1, pDraki2 };
+        saveSys.OnSaveDraki(a);
     }
+    #endregion
 }
