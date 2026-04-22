@@ -8586,7 +8586,7 @@ MonoBehaviour:
   terraToSpawn:
   - {fileID: 6114375854313542956, guid: 02f414b649aa92d47a2ff2f42d3c4ec0, type: 3}
   - {fileID: 4257661716556574206, guid: 1dadfd1ab7f814f4095ec9c536ea2701, type: 3}
-  - {fileID: 0}
+  - {fileID: 1990450479513966787, guid: 3338dfc4913a5fa418a521ed45ca5bf6, type: 3}
   gigantToSpawn:
   - {fileID: 6114375854313542956, guid: a63950b1870b02f4f921d856a63181b7, type: 3}
   - {fileID: 4257661716556574206, guid: 1b5f4e371b474824d8317c7bec65c48e, type: 3}
@@ -20866,7 +20866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2083523015
 RectTransform:
   m_ObjectHideFlags: 0

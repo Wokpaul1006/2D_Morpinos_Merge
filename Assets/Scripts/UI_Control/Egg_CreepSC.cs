@@ -11,12 +11,14 @@ public class Egg_CreepSC : MonoBehaviour
     [SerializeField] GameObject creepling, arachiling, terrorling, megarhinos, primanos, gigantinos, terranos, drakinos;
     [SerializeField] Image hatchProgress;
 
+    [HideInInspector] bool isCorrectDNA;
     [HideInInspector] int eggStraitDNA;
     void Start()
     {
         mergCtr = GameObject.Find("MergeMN").GetComponent<MergeSC>();
         countToHatch = 0;
         hatchProgress.fillAmount = 0;
+        isCorrectDNA = false;
     }
     private void OnMouseDown()
     {
@@ -35,15 +37,29 @@ public class Egg_CreepSC : MonoBehaviour
             if (eggStraitDNA == 0)
             {
                 //Arachiling
-                SpawnAra();
+                hatchProgress.fillAmount += 0.2f;
+                if (countToHatch >= 5)
+                {
+                    SpawnAra(); 
+                }
+
             }else if (eggStraitDNA == 2)
             {
                 //Terrorling
-                SpawnTerror();
-            }else if( eggStraitDNA == 3)
+                hatchProgress.fillAmount += 0.2f;
+                if (countToHatch >= 5)
+                {
+                    SpawnTerror();
+                }
+            }
+            else if( eggStraitDNA == 3)
             {
                 //Drakninos
-                SpawnDraki();
+                hatchProgress.fillAmount += 0.2f;
+                if (countToHatch >= 5)
+                {
+                    SpawnDraki();
+                }
             }
         }else if(eggStraitTier == 2)
         {
@@ -51,12 +67,20 @@ public class Egg_CreepSC : MonoBehaviour
             if (eggStraitDNA == 4)
             {
                 //Megarhinos
-                SpawnMega();
+                hatchProgress.fillAmount += 0.2f;
+                if (countToHatch >= 5)
+                {
+                    SpawnMega();
+                }
             }
             else if (eggStraitDNA == 5)
             {
                 //Primanos
-                SpawnPrima();
+                hatchProgress.fillAmount += 0.2f;
+                if (countToHatch >= 5)
+                {
+                    SpawnPrima();
+                }
             }
         } else if(eggStraitTier == 3)
         {
@@ -64,11 +88,16 @@ public class Egg_CreepSC : MonoBehaviour
             if (eggStraitDNA == 6)
             {
                 //Gigantinos
-                SpawnGigant();
+                hatchProgress.fillAmount += 0.2f;
+                if (countToHatch >= 5)
+                {
+                    SpawnGigant();
+                }
             }
             else if (eggStraitDNA == 7)
             {
                 //Terranos
+                hatchProgress.fillAmount += 0.2f;
                 SpawnTerra();
             }
         }
@@ -117,13 +146,61 @@ public class Egg_CreepSC : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "OBJ_AraDNA") { eggStraitDNA = 0; }
-        else if (collision.gameObject.name == "OBJ_AraDNA") { eggStraitDNA = 1; }
-        else if (collision.gameObject.name == "OBJ_TerrorDNA") { eggStraitDNA = 2; }
-        else if (collision.gameObject.name == "OBJ_DrakiDNA") { eggStraitDNA = 3; }
-        else if (collision.gameObject.name == "OBJ_MegaDNA") { eggStraitDNA = 4; }
-        else if (collision.gameObject.name == "OBJ_PrimaDNA") { eggStraitDNA = 5; }
-        else if (collision.gameObject.name == "OBJ_GigantDNA") { eggStraitDNA = 6; }
-        else if (collision.gameObject.name == "OBJ_TerraDNA") { eggStraitDNA = 7; }
+        if (collision.gameObject.name == "OBJ_AraDNA")
+        {
+            if (eggStraitTier == 1)
+            {
+                eggStraitDNA = 1;
+                isCorrectDNA = true;
+            }
+        }
+        else if (collision.gameObject.name == "OBJ_TerrorDNA")
+        {
+            if (eggStraitTier == 1)
+            {
+                eggStraitDNA = 2;
+                isCorrectDNA = true;
+            }
+        }
+        else if (collision.gameObject.name == "OBJ_DrakiDNA") 
+        {
+            if (eggStraitTier == 1)
+            {
+                eggStraitDNA = 3;
+                isCorrectDNA = true;
+            }
+        }
+        else if (collision.gameObject.name == "OBJ_MegaDNA")
+        {
+            if (eggStraitTier == 2)
+            {
+                eggStraitDNA = 4;
+                isCorrectDNA = true;
+            }
+        }
+        else if (collision.gameObject.name == "OBJ_PrimaDNA")
+        {
+            if (eggStraitTier == 2)
+            {
+                eggStraitDNA = 5;
+                isCorrectDNA = true;
+            }
+        }
+        else if (collision.gameObject.name == "OBJ_GigantDNA")
+        {
+            if (eggStraitTier == 3)
+            {
+                eggStraitDNA = 6;
+                isCorrectDNA = true;
+            }
+        }
+        else if (collision.gameObject.name == "OBJ_TerraDNA")
+        {
+            if (eggStraitTier == 3)
+            {
+                eggStraitDNA = 7;
+                isCorrectDNA = true;
+            }
+        }
     }
 }

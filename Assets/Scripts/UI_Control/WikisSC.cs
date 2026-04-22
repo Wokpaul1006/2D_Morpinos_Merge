@@ -65,9 +65,9 @@ public class WikisSC : MonoBehaviour
     }
     private void AssistLinks()
     {
-        planetURL = "https://sadekgame.wordpress.com/2025/09/22/lore-planet-magnar/";
+        planetURL = "https://sadekgame.wordpress.com/2025/09/22/magnar-planet/";
         specieURL = "https://sadekgame.wordpress.com/2025/02/27/morpinos/";
-        eggyURL = "https://sadekgame.wordpress.com/2026/04/06/unit-eggy-existium-universe/";
+        eggyURL = "https://sadekgame.wordpress.com/2026/04/06/eggy/";
         creepURL = "https://sadekgame.wordpress.com/2024/08/16/creepling/";
         araURL = "https://sadekgame.wordpress.com/2024/08/16/arachiling/";
         terrorURL = "https://sadekgame.wordpress.com/2026/01/19/terrorling/";

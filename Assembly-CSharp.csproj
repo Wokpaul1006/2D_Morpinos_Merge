@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Prima03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\HiveSC.cs" />
     <Compile Include="Assets\Scripts\Internal Manager\MergeSC.cs" />
-    <Compile Include="Assets\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos01.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creepling01SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Terra03SC.cs" />
@@ -89,7 +88,9 @@
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep08SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\DNAVitalSC.cs" />
+    <Compile Include="Assets\Scripts\ConquerSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega02SC.cs" />
+    <Compile Include="Assets\Scripts\MorpinosData.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep09SC.cs" />
     <Compile Include="Assets\Scripts\Internal Manager\LoadSC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\WikisSC.cs" />
@@ -109,14 +110,13 @@
     <Compile Include="Assets\Scripts\TipsSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos03.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep04SC.cs" />
-    <Compile Include="Assets\MorpinosData.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara02.cs" />
     <Compile Include="Assets\Scripts\Internal Manager\Singleton.cs" />
     <Compile Include="Assets\Scripts\UI_Control\PromotionSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep05SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\SettingSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara03SC.cs" />
-    <Compile Include="Assets\ConquerSC.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Gigant02SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\EssensePoolSC.cs" />

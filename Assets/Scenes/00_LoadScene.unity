@@ -1850,11 +1850,13 @@ MonoBehaviour:
   pDailyStreak: 0
   pLastDailyClaim: 
   pTotalScore: 0
+  pMorpinosOrder: 0
   pCreep0: 0
   pCreep1: 0
   pCreep2: 0
   pCreep3: 0
   pCreep4: 0
+  pCreep5: 0
   pCreep6: 0
   pCreep7: 0
   pCreep8: 0
@@ -1863,7 +1865,7 @@ MonoBehaviour:
   pAra1: 0
   pAra2: 0
   pAra3: 0
-  pAra4S: 0
+  pAra4: 0
   pTerror0: 0
   pTerror1: 0
   pTerror2: 0
