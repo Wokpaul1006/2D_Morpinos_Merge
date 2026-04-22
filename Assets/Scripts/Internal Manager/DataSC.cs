@@ -44,7 +44,7 @@ public class DataSC : MonoBehaviour
     }
     public void Start()
     {
-        MorpinosData dataLoad = saveSys.Load();
+
     }
 
     #region Local Handle
@@ -119,7 +119,45 @@ public class DataSC : MonoBehaviour
     }
     private void OnLoadMorpinos()
     {
-        
+        MorpinosData dataLoad = saveSys.Load();
+
+        pCreep0 = dataLoad.creeplingOnScreen[0];
+        pCreep1 = dataLoad.creeplingOnScreen[1];
+        pCreep2 = dataLoad.creeplingOnScreen[2];
+        pCreep3 = dataLoad.creeplingOnScreen[3];
+        pCreep4 = dataLoad.creeplingOnScreen[4];
+        pCreep5 = dataLoad.creeplingOnScreen[5];
+        pCreep6 = dataLoad.creeplingOnScreen[6];
+        pCreep7 = dataLoad.creeplingOnScreen[7];
+        pCreep8 = dataLoad.creeplingOnScreen[8];
+        pCreep9 = dataLoad.creeplingOnScreen[9];
+        pAra0 = dataLoad.araOnscreen[0];
+        pAra1 = dataLoad.araOnscreen[1];
+        pAra2 = dataLoad.araOnscreen[2];
+        pAra3 = dataLoad.araOnscreen[3];
+        pAra4 = dataLoad.araOnscreen[4];
+        pTerror0 = dataLoad.terrorOnScreen[0];
+        pTerror1 = dataLoad.terrorOnScreen[1];
+        pTerror2 = dataLoad.terrorOnScreen[2];
+        pTerror3 = dataLoad.terrorOnScreen[3];
+        pTerror4 = dataLoad.terrorOnScreen[4];
+        pDraki0 = dataLoad.drakiOnScreen[0];
+        pDraki1 = dataLoad.drakiOnScreen[1];
+        pDraki2 = dataLoad.drakiOnScreen[2];
+        pMega0 = dataLoad.megaOnScreen[0];
+        pMega1 = dataLoad.megaOnScreen[1];
+        pMega2 = dataLoad.megaOnScreen[2];
+        pMega3 = dataLoad.megaOnScreen[3];
+        pPrima0 = dataLoad.megaOnScreen[0];
+        pPrima1 = dataLoad.megaOnScreen[1];
+        pPrima2 = dataLoad.megaOnScreen[2];
+        pPrima3 = dataLoad.megaOnScreen[3];
+        pGigan0 = dataLoad.gigantOnScreen[0];
+        pGigan1 =  dataLoad.gigantOnScreen[1];
+        pGigan2 = dataLoad.gigantOnScreen[2];
+        pTerra0 = dataLoad.terraOnScreen[0];
+        pTerra1 = dataLoad.terraOnScreen[1];
+        pTerra2 = dataLoad.terraOnScreen[2];
     }
     public void DataDelete()
     {

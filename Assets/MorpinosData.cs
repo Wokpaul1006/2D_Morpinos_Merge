@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class MorpinosData
 {
-    public int[] creeplingOnScreen = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    public int[] creeplingOnScreen = { 0, 3, 1, 5, 6, 0, 2, 0, 0, 0 };
     public int[] araOnscreen = {0,0,0,0,0};
     public int[] terrorOnScreen = { 0, 0, 0, 0, 0 };
     public int[] megaOnScreen = { 0, 0, 0, 0 };
