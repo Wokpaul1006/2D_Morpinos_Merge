@@ -162,6 +162,7 @@ public class DataSC : MonoBehaviour
     public void DataDelete()
     {
         PlayerPrefs.DeleteAll();
+        OnResetJSON();
         SetNewPlayer();
         //infor.GetPlayerData();
     }
@@ -169,6 +170,7 @@ public class DataSC : MonoBehaviour
     {
         //Sent core data to Server
     }
+    private void OnResetJSON() { saveSys.OnReset(); }
     #endregion
 
     #region Data Update

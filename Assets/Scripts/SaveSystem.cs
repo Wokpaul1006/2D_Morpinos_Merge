@@ -11,7 +11,7 @@ public class SaveSystem : MonoBehaviour
     {
         path = Application.persistentDataPath + "/data.json";
     }
-    #region Handle Sace JSON
+    #region Handle Save JSON
     public void OnSaveCreep(int[] array)
     {
         MorpinosData data = new MorpinosData();
@@ -93,6 +93,22 @@ public class SaveSystem : MonoBehaviour
         }
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(path, json);
+    }
+    public void OnReset()
+    {
+        MorpinosData data = new MorpinosData();
+        int[]a = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        data.creeplingOnScreen = a;
+        int[]b = { 0, 0, 0, 0, 0 };
+        data.terrorOnScreen = b;
+        data.araOnscreen = b;
+        int[]c = { 0, 0, 0, 0, 0 };
+        data.primaOnScreen = c;
+        data.megaOnScreen = c;
+        int[] d = { 0, 0, 0 };
+        data.drakiOnScreen = d;
+        data.terraOnScreen = d;
+        data.gigantOnScreen = d;
     }
     #endregion
     public MorpinosData Load()

@@ -176,7 +176,8 @@ public class MergeSC : MonoBehaviour
                     }
                     else 
                     {
-                        Instantiate(creeplingToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity); 
+                        Instantiate(creeplingToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateCreepling(objectToSpawn);
                     }
                     break;
                 case 1:
@@ -184,14 +185,22 @@ public class MergeSC : MonoBehaviour
                     if (objectToSpawn >= 4)
                     {
                         Instantiate(prefEggCreep[2], spawnPos, Quaternion.identity);
-                    }else                    Instantiate(araToSpawn[objectToSpawn+1], spawnPos, Quaternion.identity);
+                    }else
+                    {
+                        Instantiate(araToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateDataTier2(breedOrder, objectToSpawn);
+                    }         
                     break;
                 case 2:
                     //Terroling
                     if (objectToSpawn >= 4)
                     {
                         Instantiate(prefEggCreep[2], spawnPos, Quaternion.identity);
-                    }else                    Instantiate(terrorToSpawn[objectToSpawn+1], spawnPos, Quaternion.identity);
+                    }else
+                    {
+                        Instantiate(terrorToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateDataTier2(breedOrder, objectToSpawn);
+                    }
                     break;
                 case 3:
                     //Drakinos
@@ -200,25 +209,41 @@ public class MergeSC : MonoBehaviour
                     if (objectToSpawn >= 3)
                     {
                         Instantiate(prefEggCreep[3], spawnPos, Quaternion.identity);
-                    }else                    Instantiate(megaToSpawn[objectToSpawn+1], spawnPos, Quaternion.identity);
+                    }else
+                    {
+                        Instantiate(megaToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateDataTier3(breedOrder, objectToSpawn);
+                    }
                     break;
                 case 5:
                     if (objectToSpawn >= 3)
                     {
                         Instantiate(prefEggCreep[3], spawnPos, Quaternion.identity);
-                    }else                    Instantiate(primaToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                    }else
+                    {
+                        Instantiate(primaToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateDataTier3(breedOrder, objectToSpawn);
+                    }
                     break;
                 case 6:
                     if (objectToSpawn >= 2)
                     {
                         Instantiate(essensePool, spawnPos, Quaternion.identity);
-                    }else                     Instantiate(terraToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                    }else
+                    {
+                        Instantiate(terraToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateDataTier4(breedOrder, objectToSpawn);
+                    }
                     break;
                 case 7:
                     if (objectToSpawn >= 2)
                     {
                         Instantiate(essensePool, spawnPos, Quaternion.identity);
-                    }else                    Instantiate(gigantToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                    }else
+                    {
+                        Instantiate(gigantToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
+                        dataSC.OnUpdateDataTier4(breedOrder, objectToSpawn);
+                    }
                     break;
             }
         }
