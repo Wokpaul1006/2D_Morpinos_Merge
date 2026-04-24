@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &14471088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -156,10 +156,10 @@ RectTransform:
   - {fileID: 1772138270}
   m_Father: {fileID: 829098345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 37.5, y: -369.58334}
+  m_SizeDelta: {x: 75, y: 84.166664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14471089
 MonoBehaviour:
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2733,7 +2733,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 281371862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &281371862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4007,7 +4019,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 394078411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394078411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4541,6 +4565,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 416962072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &416962074 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 416962072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &425716982
 GameObject:
   m_ObjectHideFlags: 0
@@ -6162,7 +6197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 585697341}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &585697341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6258,7 +6305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e52c6e5f5bae4d944b634538283c573c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42f5230bb3f960e4d8c6f0867d736f50, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7997,10 +8044,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f3647f25ad114daad5e41102cd3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardBtn: []
-  dailyGrid: []
-  rewardText: []
-  rewardToGive: 0
+  rewardBtn:
+  - {fileID: 585697340}
+  - {fileID: 928057978}
+  - {fileID: 394078410}
+  - {fileID: 281371861}
+  - {fileID: 1467076688}
+  - {fileID: 887656170}
+  - {fileID: 1939218836}
+  dailyGrid:
+  - {fileID: 2067596242}
+  - {fileID: 1486869634}
+  - {fileID: 1277642167}
+  - {fileID: 478843084}
+  - {fileID: 445563543}
+  - {fileID: 1409627349}
+  - {fileID: 257506264}
+  rewardText:
+  - {fileID: 416962074}
+  - {fileID: 1965413673}
+  - {fileID: 1442732069}
+  - {fileID: 1041231912}
+  - {fileID: 1991647655}
+  - {fileID: 1792627801}
+  - {fileID: 1123364323}
 --- !u!1 &786642452
 GameObject:
   m_ObjectHideFlags: 0
@@ -8123,6 +8190,7 @@ GameObject:
   - component: {fileID: 804111247}
   - component: {fileID: 804111249}
   - component: {fileID: 804111248}
+  - component: {fileID: 804111250}
   m_Layer: 5
   m_Name: PNL_Shop
   m_TagString: Untagged
@@ -8190,6 +8258,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804111246}
   m_CullTransparentMesh: 1
+--- !u!114 &804111250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804111246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098b9567b7d89d440bcae830cf0d2c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &821436666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8890,7 +8970,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 887656171}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &887656171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9161,7 +9253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 928057979}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &928057979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10210,6 +10314,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1041231910}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1041231912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 1041231910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1041929547
 GameObject:
   m_ObjectHideFlags: 0
@@ -11211,6 +11326,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1123364321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1123364323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 1123364321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127309743
 GameObject:
   m_ObjectHideFlags: 0
@@ -12068,7 +12194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Text
-      value: TERRORLING
+      value: 'BREED: TERRORLING'
       objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Color.b
@@ -13041,7 +13167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb484f21665ee78468e83da352ed3051, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 269ef661a29cac847ab0e3cb5bfc7f3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14142,6 +14268,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1442732067}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1442732069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 1442732067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1450506679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14475,7 +14612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1467076689}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1467076689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15979,7 +16128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb484f21665ee78468e83da352ed3051, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 269ef661a29cac847ab0e3cb5bfc7f3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16155,7 +16304,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1360109139}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4876867
+  m_Size: 0.4875
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16866,6 +17015,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1792627799}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1792627801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 1792627799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1804555485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16960,7 +17120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Text
-      value: 'BREED: ESSENSE POOL'
+      value: 'BREED: GENOPINOS'
       objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Color.b
@@ -17900,7 +18060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb484f21665ee78468e83da352ed3051, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 269ef661a29cac847ab0e3cb5bfc7f3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18777,7 +18937,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1939218837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738212558}
+        m_TargetAssemblyTypeName: PatrolEarningSC, Assembly-CSharp
+        m_MethodName: OnClaimDaily
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1939218837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19458,6 +19630,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1965413671}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1965413673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 1965413671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1990163780
 GameObject:
   m_ObjectHideFlags: 0
@@ -19651,6 +19834,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6138113265063956289, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
   m_PrefabInstance: {fileID: 1991647653}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1991647655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
+  m_PrefabInstance: {fileID: 1991647653}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997339771
 GameObject:
   m_ObjectHideFlags: 0
@@ -19945,7 +20139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Text
-      value: 'BREED: OVERHIVE'
+      value: 'BREED: IMPERATOS'
       objectReference: {fileID: 0}
     - target: {fileID: 6138113265063956290, guid: a7680b12ad1b5fc488a5adade490e711, type: 3}
       propertyPath: m_Color.b
@@ -21064,7 +21258,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 597513527}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.24384335
+  m_Size: 0.24375
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

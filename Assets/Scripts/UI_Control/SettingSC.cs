@@ -5,34 +5,44 @@ using UnityEngine.UI;
 
 public class SettingSC : MonoBehaviour
 {
-    [SerializeField] SoundSC soundMN;
+    private SoundSC soundSFX;
+    private MainThemeSC soundTheme;
+    [HideInInspector] GenControlSC genCtrl;
+    [HideInInspector] DataSC data;
+
     [SerializeField] GameObject creditPnl, inforPnl;
     [SerializeField] Button soundTG, sfxToggle;
+    [SerializeField] Image soundOnImg, soundOffImg, sfxOnImg, sfxOffImg;
+
+    int themeAllow, sfxAllow;
     void Start()
     {
-        soundMN = GameObject.Find("GenMN").GetComponent<SoundSC>();   
+        data = GameObject.Find("GenMN").GetComponent<DataSC>();
+        soundTheme = GameObject.Find("GenMN").GetComponent<MainThemeSC>();
+        soundSFX = GameObject.Find("GenMN").GetComponent<SoundSC>();
+        CheckSound();
     }
 
     public void OnToggleSound()
     {
-        if (soundMN.isAllowTheme == true)
+        if (soundTheme.isAllowTheme == true)
         {
-            soundMN.MuteTheme();
+            soundTheme.MuteTheme();
         }
-        else if(soundMN.isAllowTheme == false)
+        else if(soundTheme.isAllowTheme == false)
         {
-            soundMN.PlayTheme();
+            soundTheme.PlayTheme();
         } 
     }
     public void OnToggleSFX()
     {
-        if (soundMN.isAllowSFX == true)
+        if (soundSFX.isAllowSFX == true)
         {
-            soundMN.MuteSFX();
+            soundSFX.MuteSFX();
         }
-        else if(soundMN.isAllowSFX == false)
+        else if(soundSFX.isAllowSFX == false)
         {
-            soundMN.PlaySFX();
+            soundSFX.PlaySFX();
         }
     }
     public void ToCredits()
@@ -46,4 +56,36 @@ public class SettingSC : MonoBehaviour
         gameObject.SetActive(false );
     }
     public void ExitGame() => Application.Quit();
+    public void CheckSound()
+    {
+        themeAllow = data.pTheme;
+        sfxAllow = data.pSFX;
+        switch (themeAllow)
+        {
+            case 0:
+                soundOnImg.gameObject.SetActive(true);
+                soundOffImg.gameObject.SetActive(false);
+                soundTheme.MuteTheme();
+                break;
+            case 1:
+                soundOnImg.gameObject.SetActive(false);
+                soundOffImg.gameObject.SetActive(true);
+                soundTheme.PlayTheme();
+                break;
+        }
+
+        switch (sfxAllow)
+        {
+            case 0:
+                sfxOnImg.gameObject.SetActive(true);
+                sfxOffImg.gameObject.SetActive(false);
+                soundSFX.MuteSFX();
+                break;
+            case 1:
+                sfxOnImg.gameObject.SetActive(false);
+                sfxOffImg.gameObject.SetActive(true);
+                soundSFX.PlaySFX();
+                break;
+        }
+    }
 }

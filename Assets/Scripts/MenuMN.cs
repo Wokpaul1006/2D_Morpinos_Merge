@@ -34,6 +34,8 @@ public class MenuMN : MonoBehaviour
     }
     public void OnUpdateUI()
     {
+        print("in update coitn");
+        print("coin = " + dataCtr.pCoin);
         curMoney.text = dataCtr.pCoin.ToString();
         curGems.text = dataCtr.pGems.ToString();
         curSpawnBoost.text = "1";

@@ -15,16 +15,18 @@ public class PatrolEarningSC : MonoBehaviour
  
     private const string LastPatrolTimeKey = "LastPatrolTime";
     private const string PatrolStreakKey = "PatrolStreak";
-    private int baseReward = 10; // example reward, x2 for each time count
-    public int rewardToGive;
+    private int rewardToGive = 10; // example reward, x2 for each time count
     private bool isAllowDailyClaim;
     private int streakDaily;
     private string lastCollectDay;
+    private void Awake()
+    {
+        genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
+        data = GameObject.Find("GenMN").GetComponent<DataSC>();
+        OnCheckDailyClaimOnInit();
+    }
     void Start()
     {
-        genCtr = GameObject.Find("GeneralControlMN").GetComponent<GenControlSC>();
-        data = GameObject.Find("GeneralControlMN").GetComponent<DataSC>();
-
         isAllowDailyClaim = false;
         streakDaily = data.pDailyStreak;
         lastCollectDay = "";
@@ -42,84 +44,132 @@ public class PatrolEarningSC : MonoBehaviour
         rewardText[4].text = "160";
         rewardText[5].text = "320";
         rewardText[6].text = "640";
-        rewardText[7].text = "1280";
     }
 
     #region Handle Claim Daily
     void ShowRewardDaily()
     {
-        if (genCtr.today != data.pLastDailyClaim)
+        if (data.pLastDailyClaim == "")
         {
-            //New day access
-            rewardBtn[streakDaily+1].GetComponent<Button>().interactable = true;
-            if (streakDaily >= 1 && streakDaily < 8)
+            //First day of play
+            isAllowDailyClaim = true;
+            for (int i = 0; i < rewardBtn.Count; i++)
             {
-                //Lock previous day claim buttons
-                for (int i = 0; i <= streakDaily - 1; i++)
-                {
-                    rewardBtn[i].GetComponent<Button>().interactable = false;
-                }
-                isAllowDailyClaim = true;
+                rewardBtn[i].GetComponent<Button>().interactable = false;
             }
+            rewardBtn[0].GetComponent<Button>().interactable = true;
         }
-        else if (genCtr.today == data.pLastDailyClaim)
+        else
         {
-            //Same day access
-            isAllowDailyClaim = false;
-            rewardBtn[streakDaily].GetComponent<Button>().interactable = false;
+            if (genCtr.today != data.pLastDailyClaim)
+            {
+                //New day access + unclaimed
+                for (int i = 0; i < rewardBtn.Count; i++)
+                {
+                    rewardBtn[streakDaily].GetComponent<Button>().interactable = false;
+                }
+
+                if (streakDaily >= 1 && streakDaily < 8)
+                {
+                    //Lock previous day claim buttons
+                    for (int i = 0; i < streakDaily; i++)
+                    {
+                        rewardBtn[i].GetComponent<Button>().interactable = false;
+                    }
+
+                    for(int j = streakDaily; j > rewardBtn.Count; j--) 
+                    {
+                        rewardBtn[j].GetComponent<Button>().interactable = false;
+                    }
+
+                    isAllowDailyClaim = false;
+                }
+            }
+            else if (genCtr.today == data.pLastDailyClaim)
+            {
+                if (data.pAllowClaimDaily == 1)
+                {
+                    //Same day access + claimed
+                    isAllowDailyClaim = false;
+                    for (int i = 0; i < rewardBtn.Count; i++)
+                    {
+                        rewardBtn[i].GetComponent<Button>().interactable = false;
+                    }
+                }
+                else if (data.pAllowClaimDaily == 0)
+                {
+                    //Same day, unclaimed
+                    isAllowDailyClaim = true;
+                    for (int i = 0; i < rewardBtn.Count; i++)
+                    {
+                        rewardBtn[i].GetComponent<Button>().interactable = false;
+                    }
+                    rewardBtn[streakDaily].GetComponent<Button>().interactable = true; //Enable only able-to-claim button
+                }
+            }
         }
     }
     public void OnClaimDaily()
     {
         int tempFinalScoreToOverride;
         SelectRewardDaily();
-        tempFinalScoreToOverride = baseReward + data.pTotalScore;
-
-        print("streakDaily = " + streakDaily);
-
         rewardBtn[streakDaily].GetComponent<Button>().interactable = false;
-        streakDaily++;
-
         lastCollectDay = DateTime.Today.Day.ToString();
-
         isAllowDailyClaim = false;
+        tempFinalScoreToOverride = rewardToGive;
+        streakDaily++;
+        data.UpdateAllowClaimDaily(1);
 
-        data.UpdateTotalScore(tempFinalScoreToOverride); // Update score
+        print("tempFinalScoreToOverride = " + tempFinalScoreToOverride);
+
+        data.UpdateTotalCoin(tempFinalScoreToOverride); // Update score
         data.UpdateStreak(1, streakDaily); //Update streak
         data.UpdatePatrolDailyReward(lastCollectDay); //Update last collect day
-
-        //ShowRewardDaily();
-        //menu.UpdateUI();
+        ShowRewardDaily();
+        genCtr.UpdateMenuUI();
     }
     private void SelectRewardDaily()
     {
         switch (streakDaily)
         {
             case 0:
-                baseReward = 10;
+                rewardToGive = 10;
                 break;
             case 1:
-                baseReward = 20;
+                rewardToGive = 20;
                 break;
             case 2:
-                baseReward = 40;
+                rewardToGive = 40;
                 break;
             case 3:
-                baseReward = 80;
+                rewardToGive = 80;
                 break;
             case 4:
-                baseReward = 160;
+                rewardToGive = 160;
                 break;
             case 5:
-                baseReward = 320;
+                rewardToGive = 320;
                 break;
             case 6:
-                baseReward = 640;
+                rewardToGive = 640;
                 break;
             case 7:
-                baseReward = 1280;
+                rewardToGive = 1280;
                 break;
         }
     }
     #endregion
+
+    private void OnCheckDailyClaimOnInit()
+    {
+        if(genCtr.today != data.pLastDailyClaim)
+        {
+            data.UpdateAllowClaimDaily(0);
+            isAllowDailyClaim = true;
+        }
+        else
+        {
+            isAllowDailyClaim = false;
+        }
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class GenControlSC : MonoBehaviour
     [HideInInspector] ConquerSC conquerCtr;
     void Start()
     {
+        today = (DateTime.Today.Day).ToString();
         curPower = dataCtr.pTotalScore;
         OnShowSetting(false);
         OnShowCredits(false);
@@ -52,4 +54,9 @@ public class GenControlSC : MonoBehaviour
     public void OnShowCredits(bool isShow) => credtCr.gameObject.SetActive(isShow);
     public void OnGoesToHatchery() => sceneCtr.LoadScene(1);
     public void OnGoesToConquer() => sceneCtr.LoadScene(2);
+    
+    public void UpdateMenuUI()
+    {
+        menuCtr.OnUpdateUI();
+    }
 }

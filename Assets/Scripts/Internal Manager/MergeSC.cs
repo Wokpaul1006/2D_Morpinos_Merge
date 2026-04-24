@@ -47,52 +47,52 @@ public class MergeSC : MonoBehaviour
     }
     private void SpawnOnInit()
     {
-        if(dataSC.pCreep0 != 0) { OnSpawnMorpinosOnScree(0, 0, dataSC.pCreep0); }
-        if (dataSC.pCreep1 != 0) { OnSpawnMorpinosOnScree(0, 1, dataSC.pCreep1); }
-        if (dataSC.pCreep2 != 0) { OnSpawnMorpinosOnScree(0, 2, dataSC.pCreep2); }
-        if (dataSC.pCreep3 != 0) { OnSpawnMorpinosOnScree(0, 3, dataSC.pCreep3); }
-        if (dataSC.pCreep4 != 0) { OnSpawnMorpinosOnScree(0, 4, dataSC.pCreep4); }
-        if (dataSC.pCreep5 != 0) { OnSpawnMorpinosOnScree(0, 5, dataSC.pCreep5); }
-        if (dataSC.pCreep6 != 0) { OnSpawnMorpinosOnScree(0, 6, dataSC.pCreep6); }
-        if (dataSC.pCreep7 != 0) { OnSpawnMorpinosOnScree(0, 7, dataSC.pCreep7); }
-        if (dataSC.pCreep8 != 0) { OnSpawnMorpinosOnScree(0, 8, dataSC.pCreep8); }
-        if (dataSC.pCreep9 != 0) { OnSpawnMorpinosOnScree(0, 9, dataSC.pCreep9); }
+        if(dataSC.pCreep0 != 0) { OnSpawnMorpinosInit(0, 0, dataSC.pCreep0); }
+        if (dataSC.pCreep1 != 0) { OnSpawnMorpinosInit(0, 1, dataSC.pCreep1); }
+        if (dataSC.pCreep2 != 0) { OnSpawnMorpinosInit(0, 2, dataSC.pCreep2); }
+        if (dataSC.pCreep3 != 0) { OnSpawnMorpinosInit(0, 3, dataSC.pCreep3); }
+        if (dataSC.pCreep4 != 0) { OnSpawnMorpinosInit(0, 4, dataSC.pCreep4); }
+        if (dataSC.pCreep5 != 0) { OnSpawnMorpinosInit(0, 5, dataSC.pCreep5); }
+        if (dataSC.pCreep6 != 0) { OnSpawnMorpinosInit(0, 6, dataSC.pCreep6); }
+        if (dataSC.pCreep7 != 0) { OnSpawnMorpinosInit(0, 7, dataSC.pCreep7); }
+        if (dataSC.pCreep8 != 0) { OnSpawnMorpinosInit(0, 8, dataSC.pCreep8); }
+        if (dataSC.pCreep9 != 0) { OnSpawnMorpinosInit(0, 9, dataSC.pCreep9); }
 
-        if (dataSC.pAra0 != 0) { OnSpawnMorpinosOnScree(1, 0, dataSC.pAra0); }
-        if (dataSC.pAra1 != 0) { OnSpawnMorpinosOnScree(1, 1, dataSC.pAra1); }
-        if (dataSC.pAra2 != 0) { OnSpawnMorpinosOnScree(1, 2, dataSC.pAra2); }
-        if (dataSC.pAra3 != 0) { OnSpawnMorpinosOnScree(1, 3, dataSC.pAra3); }
-        if (dataSC.pAra4 != 0) { OnSpawnMorpinosOnScree(1, 4, dataSC.pAra4); }
+        if (dataSC.pAra0 != 0) { OnSpawnMorpinosInit(1, 0, dataSC.pAra0); }
+        if (dataSC.pAra1 != 0) { OnSpawnMorpinosInit(1, 1, dataSC.pAra1); }
+        if (dataSC.pAra2 != 0) { OnSpawnMorpinosInit(1, 2, dataSC.pAra2); }
+        if (dataSC.pAra3 != 0) { OnSpawnMorpinosInit(1, 3, dataSC.pAra3); }
+        if (dataSC.pAra4 != 0) { OnSpawnMorpinosInit(1, 4, dataSC.pAra4); }
 
-        if (dataSC.pTerror0 != 0) { OnSpawnMorpinosOnScree(2, 0, dataSC.pTerror0); }
-        if (dataSC.pTerror1 != 0) { OnSpawnMorpinosOnScree(2, 1, dataSC.pTerror1); }
-        if (dataSC.pTerror2 != 0) { OnSpawnMorpinosOnScree(2, 2, dataSC.pTerror2); }
-        if (dataSC.pTerror3 != 0) { OnSpawnMorpinosOnScree(2, 3, dataSC.pTerror3); }
-        if (dataSC.pTerror4 != 0) { OnSpawnMorpinosOnScree(2, 4, dataSC.pTerror4); }
+        if (dataSC.pTerror0 != 0) { OnSpawnMorpinosInit(2, 0, dataSC.pTerror0); }
+        if (dataSC.pTerror1 != 0) { OnSpawnMorpinosInit(2, 1, dataSC.pTerror1); }
+        if (dataSC.pTerror2 != 0) { OnSpawnMorpinosInit(2, 2, dataSC.pTerror2); }
+        if (dataSC.pTerror3 != 0) { OnSpawnMorpinosInit(2, 3, dataSC.pTerror3); }
+        if (dataSC.pTerror4 != 0) { OnSpawnMorpinosInit(2, 4, dataSC.pTerror4); }
 
-        if (dataSC.pDraki0 != 0) { OnSpawnMorpinosOnScree(3, 0, dataSC.pDraki0); }
-        if (dataSC.pDraki1 != 0) { OnSpawnMorpinosOnScree(3, 1, dataSC.pDraki1); }
-        if (dataSC.pDraki2 != 0) { OnSpawnMorpinosOnScree(3, 2, dataSC.pDraki2); }
+        if (dataSC.pDraki0 != 0) { OnSpawnMorpinosInit(3, 0, dataSC.pDraki0); }
+        if (dataSC.pDraki1 != 0) { OnSpawnMorpinosInit(3, 1, dataSC.pDraki1); }
+        if (dataSC.pDraki2 != 0) { OnSpawnMorpinosInit(3, 2, dataSC.pDraki2); }
 
-        if (dataSC.pMega0 != 0) { OnSpawnMorpinosOnScree(4, 0, dataSC.pMega0); }
-        if (dataSC.pMega1 != 0) { OnSpawnMorpinosOnScree(4, 1, dataSC.pMega1); }
-        if (dataSC.pMega2 != 0) { OnSpawnMorpinosOnScree(4, 2, dataSC.pMega2); }
-        if (dataSC.pMega3 != 0) { OnSpawnMorpinosOnScree(4, 3, dataSC.pMega3); }
+        if (dataSC.pMega0 != 0) { OnSpawnMorpinosInit(4, 0, dataSC.pMega0); }
+        if (dataSC.pMega1 != 0) { OnSpawnMorpinosInit(4, 1, dataSC.pMega1); }
+        if (dataSC.pMega2 != 0) { OnSpawnMorpinosInit(4, 2, dataSC.pMega2); }
+        if (dataSC.pMega3 != 0) { OnSpawnMorpinosInit(4, 3, dataSC.pMega3); }
 
-        if (dataSC.pPrima0 != 0) { OnSpawnMorpinosOnScree(5, 0, dataSC.pPrima0); }
-        if (dataSC.pPrima1 != 0) { OnSpawnMorpinosOnScree(5, 1, dataSC.pPrima1); }
-        if (dataSC.pPrima2 != 0) { OnSpawnMorpinosOnScree(5, 2, dataSC.pPrima2); }
-        if (dataSC.pPrima3 != 0) { OnSpawnMorpinosOnScree(5, 3, dataSC.pPrima3); }
+        if (dataSC.pPrima0 != 0) { OnSpawnMorpinosInit(5, 0, dataSC.pPrima0); }
+        if (dataSC.pPrima1 != 0) { OnSpawnMorpinosInit(5, 1, dataSC.pPrima1); }
+        if (dataSC.pPrima2 != 0) { OnSpawnMorpinosInit(5, 2, dataSC.pPrima2); }
+        if (dataSC.pPrima3 != 0) { OnSpawnMorpinosInit(5, 3, dataSC.pPrima3); }
 
-        if (dataSC.pGigan0 != 0) { OnSpawnMorpinosOnScree(6, 0, dataSC.pGigan0); }
-        if (dataSC.pGigan0 != 0) { OnSpawnMorpinosOnScree(6, 1, dataSC.pGigan1); }
-        if (dataSC.pGigan0 != 0) { OnSpawnMorpinosOnScree(6, 2, dataSC.pGigan2); }
+        if (dataSC.pGigan0 != 0) { OnSpawnMorpinosInit(6, 0, dataSC.pGigan0); }
+        if (dataSC.pGigan0 != 0) { OnSpawnMorpinosInit(6, 1, dataSC.pGigan1); }
+        if (dataSC.pGigan0 != 0) { OnSpawnMorpinosInit(6, 2, dataSC.pGigan2); }
 
-        if (dataSC.pTerra0 != 0) { OnSpawnMorpinosOnScree(7, 0, dataSC.pTerra0); }
-        if (dataSC.pTerra1 != 0) { OnSpawnMorpinosOnScree(7, 1, dataSC.pTerra1); }
-        if (dataSC.pTerra2 != 0) { OnSpawnMorpinosOnScree(7, 2, dataSC.pTerra2); }
+        if (dataSC.pTerra0 != 0) { OnSpawnMorpinosInit(7, 0, dataSC.pTerra0); }
+        if (dataSC.pTerra1 != 0) { OnSpawnMorpinosInit(7, 1, dataSC.pTerra1); }
+        if (dataSC.pTerra2 != 0) { OnSpawnMorpinosInit(7, 2, dataSC.pTerra2); }
     }
-    private void OnSpawnMorpinosOnScree(int breedToSpawn, int subBreedToSpawn, int amountToSpawn)
+    private void OnSpawnMorpinosInit(int breedToSpawn, int subBreedToSpawn, int amountToSpawn)
     {
         if (breedToSpawn == 0)
         {
@@ -177,7 +177,7 @@ public class MergeSC : MonoBehaviour
                     else 
                     {
                         Instantiate(creeplingToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateCreepling(objectToSpawn);
+                        dataSC.OnUpdateCreepling(objectToSpawn+1);
                     }
                     break;
                 case 1:
@@ -188,7 +188,7 @@ public class MergeSC : MonoBehaviour
                     }else
                     {
                         Instantiate(araToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateDataTier2(breedOrder, objectToSpawn);
+                        dataSC.OnUpdateDataTier2(breedOrder, objectToSpawn+1);
                     }         
                     break;
                 case 2:
@@ -199,7 +199,7 @@ public class MergeSC : MonoBehaviour
                     }else
                     {
                         Instantiate(terrorToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateDataTier2(breedOrder, objectToSpawn);
+                        dataSC.OnUpdateDataTier2(breedOrder, objectToSpawn+1);
                     }
                     break;
                 case 3:
@@ -212,7 +212,7 @@ public class MergeSC : MonoBehaviour
                     }else
                     {
                         Instantiate(megaToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateDataTier3(breedOrder, objectToSpawn);
+                        dataSC.OnUpdateDataTier3(breedOrder, objectToSpawn+1);
                     }
                     break;
                 case 5:
@@ -222,7 +222,7 @@ public class MergeSC : MonoBehaviour
                     }else
                     {
                         Instantiate(primaToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateDataTier3(breedOrder, objectToSpawn);
+                        dataSC.OnUpdateDataTier3(breedOrder, objectToSpawn+1);
                     }
                     break;
                 case 6:
@@ -232,7 +232,7 @@ public class MergeSC : MonoBehaviour
                     }else
                     {
                         Instantiate(terraToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateDataTier4(breedOrder, objectToSpawn);
+                        dataSC.OnUpdateDataTier4(breedOrder, objectToSpawn+1);
                     }
                     break;
                 case 7:
@@ -242,7 +242,7 @@ public class MergeSC : MonoBehaviour
                     }else
                     {
                         Instantiate(gigantToSpawn[objectToSpawn + 1], spawnPos, Quaternion.identity);
-                        dataSC.OnUpdateDataTier4(breedOrder, objectToSpawn);
+                        dataSC.OnUpdateDataTier4(breedOrder, objectToSpawn+1);
                     }
                     break;
             }

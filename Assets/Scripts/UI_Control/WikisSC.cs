@@ -17,11 +17,11 @@ public class WikisSC : MonoBehaviour
         {
             case 0:
                 //Morpinos Specie
-                Application.OpenURL(specieURL);
+                Application.OpenURL(planetURL); 
                 break;
             case 1:
                 //Planet
-                Application.OpenURL(planetURL);
+                Application.OpenURL(specieURL);
                 break;
             case 2:
                 Application.OpenURL(eggyURL);
@@ -56,11 +56,11 @@ public class WikisSC : MonoBehaviour
                 Application.OpenURL(hivemindURL);
                 break;
             case 12:
-                Application.OpenURL(essenseSphereURL);
-                break;
-            case 13:
                 Application.OpenURL(nuclepinosURL);
                 break;
+            case 13:
+                Application.OpenURL(essenseSphereURL);
+                break; 
         }
     }
     private void AssistLinks()

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Egg_CreepSC : MonoBehaviour
 {
     [HideInInspector] MergeSC mergCtr;
+    [HideInInspector] DataSC dataCtr;
     int countToHatch;
     [SerializeField] int eggStraitTier;
     [SerializeField] GameObject creepling, arachiling, terrorling, megarhinos, primanos, gigantinos, terranos, drakinos;
@@ -16,6 +17,7 @@ public class Egg_CreepSC : MonoBehaviour
     void Start()
     {
         mergCtr = GameObject.Find("MergeMN").GetComponent<MergeSC>();
+        dataCtr = GameObject.Find("GenMN").GetComponent<DataSC>();
         countToHatch = 0;
         hatchProgress.fillAmount = 0;
         isCorrectDNA = false;
@@ -107,41 +109,49 @@ public class Egg_CreepSC : MonoBehaviour
     {
         Instantiate(creepling, gameObject.transform.position, Quaternion.identity);
         mergCtr.OnCountCurrentPower();
+        dataCtr.OnUpdateCreepling(0);
         Destroy(gameObject);
     }
     private void SpawnAra()
     {
         Instantiate(arachiling, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier2(0, 0);
         Destroy(gameObject);
     }
     private void SpawnTerror()
     {
         Instantiate(terrorling, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier2(1, 0);
         Destroy(gameObject);
     }
     private void SpawnMega()
     {
         Instantiate(megarhinos, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier3(0, 0);
         Destroy(gameObject);
     }
     private void SpawnPrima()
     {
         Instantiate(primanos, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier3(1, 0);
         Destroy(gameObject);
     }
     private void SpawnGigant()
     {
         Instantiate(creepling, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier3(0, 0);
         Destroy(gameObject);
     }
     private void SpawnTerra()
     {
         Instantiate(creepling, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier3(1, 0);
         Destroy(gameObject);
     }
     private void SpawnDraki()
     {
         Instantiate(creepling, gameObject.transform.position, Quaternion.identity);
+        dataCtr.OnUpdateDataTier2(2, 0);
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)

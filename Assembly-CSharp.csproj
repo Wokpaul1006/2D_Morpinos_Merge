@@ -60,6 +60,7 @@
     <Analyzer Include="D:\Unity Setup\Unity Engine\2022.3.62f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MainThemeSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Terra01SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Prima03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\HiveSC.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara05SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror04SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep08SC.cs" />
+    <Compile Include="Assets\ShopSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\DNAVitalSC.cs" />
     <Compile Include="Assets\Scripts\ConquerSC.cs" />
@@ -101,10 +103,10 @@
     <Compile Include="Assets\Scripts\UI_Control\MorpinosSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror05SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\CreditSC.cs" />
-    <Compile Include="Assets\Scripts\Internal Manager\SoundSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Gigant01SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos02.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega03SC.cs" />
+    <Compile Include="Assets\SoundSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep07SC.cs" />
     <Compile Include="Assets\Scripts\MenuMN.cs" />
     <Compile Include="Assets\Scripts\TipsSC.cs" />

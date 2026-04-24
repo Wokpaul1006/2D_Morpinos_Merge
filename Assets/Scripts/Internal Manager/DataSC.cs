@@ -111,14 +111,15 @@ public class DataSC : MonoBehaviour
 
         //Patrol Reward
         pLastDailyClaim = PlayerPrefs.GetString("LastPatrolDailyTime");
-        pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimDaily");
-        pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
+        pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimDaily"); //0 = allow, 1 = deny
+         pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
 
         //Gameplay
-        OnLoadMorpinos();
+        InvokeRepeating(nameof(AutoSaveMorpinos), 60f, 60f);
     }
-    private void OnLoadMorpinos()
+    public void OnLoadMorpinos()
     {
+        print("in Load of Data");
         MorpinosData dataLoad = saveSys.Load();
 
         pCreep0 = dataLoad.creeplingOnScreen[0];
@@ -182,6 +183,8 @@ public class DataSC : MonoBehaviour
         tempTotalScore = pTotalScore + currencyToPlus;
         PlayerPrefs.SetInt("Totalscore", tempTotalScore);
         pTotalScore = PlayerPrefs.GetInt("Totalscore");
+
+        print("pTotalScore in data = " + pTotalScore);
     }
     public void UpdateTotalGem(int gems)
     {
@@ -215,7 +218,7 @@ public class DataSC : MonoBehaviour
     public void UpdateAllowClaimDaily(int state)
     {
         PlayerPrefs.SetInt("AllowClaimDaily", state);
-        pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimAllowClaimDaily");
+        pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimDaily");
     }
     public void UpdateStreak(int typeStreak, int value)
     {
@@ -233,43 +236,43 @@ public class DataSC : MonoBehaviour
         switch (breedOrder)
         {
             case 0:
-                pCreep0 += 1;
+                pCreep0++;
                 break;
             case 1:
                 pCreep0 -= 2;
-                pCreep1 += 1;
+                pCreep1++;
                 break;
             case 2:
                 pCreep1 -= 2;
-                pCreep2 += 1;
+                pCreep2++;
                 break;
             case 3:
                 pCreep2 -= 2;
-                pCreep3 += 1;
+                pCreep3++;
                 break;
             case 4:
                 pCreep3 -= 2;
-                pCreep4 += 1;
+                pCreep4++;
                 break;
             case 5:
                 pCreep4 -= 2;
-                pCreep5 += 1;
+                pCreep5++;
                 break;
             case 6:
                 pCreep5 -= 2;
-                pCreep6 += 1;
+                pCreep6++;
                 break;
             case 7:
                 pCreep6 -= 2;
-                pCreep7 += 1;
+                pCreep7++;
                 break;
             case 8:
                 pCreep7 -= 2;
-                pCreep8 += 1;
+                pCreep8++;
                 break;
             case 9:
                 pCreep8 -= 2;
-                pCreep9 += 1;
+                pCreep9++;
                 break;
             case 10:
                 pCreep9 -= 2;
@@ -283,23 +286,23 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pAra0 += 1;
+                    pAra0++;
                     break;
                 case 1:
                     pAra0 -= 2;
-                    pAra1 += 1;
+                    pAra1++;
                     break;
                 case 2:
                     pAra1 -= 2;
-                    pAra2 += 1;
+                    pAra2++;
                     break;
                 case 3:
                     pAra2 -= 2;
-                    pAra3 += 1;
+                    pAra3++;
                     break;
                 case 4:
                     pAra3 -= 2;
-                    pAra4 += 1;
+                    pAra4++;
                     break;
             }
         }
@@ -308,23 +311,23 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pTerror0 += 1;
+                    pTerror0++;
                     break;
                 case 1:
                     pTerror0 -= 2;
-                    pTerror1 += 1;
+                    pTerror1++;
                     break;
                 case 2:
                     pTerror1 -= 2;
-                    pTerror2 += 1;
+                    pTerror2++;
                     break;
                 case 3:
                     pTerror2 -= 2;
-                    pTerror3 += 1;
+                    pTerror3++;
                     break;
                 case 4:
                     pTerror3 -= 2;
-                    pTerror4 += 1;
+                    pTerror4++;
                     break;
             }
         }
@@ -333,15 +336,15 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pDraki0 += 1;
+                    pDraki0++;
                     break;
                 case 1:
                     pDraki0 -= 2;
-                    pDraki1 += 1;
+                    pDraki1++;
                     break;
                 case 2:
                     pDraki1 -= 2;
-                    pDraki2 += 1;
+                    pDraki2++;
                     break;
             }
         }
@@ -353,19 +356,19 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pMega0 += 1;
+                    pMega0++;
                     break;
                 case 1:
                     pMega0 -= 2;
-                    pMega1 += 1;
+                    pMega1++;
                     break;
                 case 2:
                     pMega1 -= 2;
-                    pMega2 += 1;
+                    pMega2++;
                     break;
                 case 3:
                     pMega2 -= 2;
-                    pMega3 += 1;
+                    pMega3++;
                     break;
             }
         }
@@ -374,19 +377,19 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pPrima0 += 1;
+                    pPrima0++;
                     break;
                 case 1:
                     pPrima0 -= 2;
-                    pPrima1 += 1;
+                    pPrima1++;
                     break;
                 case 2:
                     pPrima1 -= 2;
-                    pPrima2 += 1;
+                    pPrima2++;
                     break;
                 case 3:
                     pPrima2 -= 2;
-                    pPrima3 += 1;
+                    pPrima3++;
                     break;
             }
         }
@@ -398,15 +401,15 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pGigan0 += 1;
+                    pGigan0++;
                     break;
                 case 1:
                     pGigan0 -= 2;
-                    pGigan1 += 1;
+                    pGigan1++;
                     break;
                 case 2:
                     pGigan1 -= 2;
-                    pGigan2 += 1;
+                    pGigan2++;
                     break;
             }
         }
@@ -415,15 +418,15 @@ public class DataSC : MonoBehaviour
             switch (breedSubOrder)
             {
                 case 0:
-                    pTerra0 += 1;
+                    pTerra0++;
                     break;
                 case 1:
                     pTerra0 -= 2;
-                    pTerra1 += 1;
+                    pTerra1++;
                     break;
                 case 2:
                     pTerra1 -= 2;
-                    pTerra2 += 1;
+                    pTerra2++;
                     break;
             }
         }
@@ -433,7 +436,6 @@ public class DataSC : MonoBehaviour
     #region Checking Zone
     private bool CheckFirstPlay()
     {
-        //print("FirstPlay: " + PlayerPrefs.GetInt("HasPlayed"));
         if (PlayerPrefs.GetInt("HasPlayed") == 1) return isFirstPlay = false;
         else return true;
     }

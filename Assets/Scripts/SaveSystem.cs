@@ -6,15 +6,21 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
 {
+    [HideInInspector] DataSC dataCtr;
     string path;
     void Awake()
     {
         path = Application.persistentDataPath + "/data.json";
+        dataCtr = GameObject.Find("GenMN").GetComponent<DataSC>();
+    }
+    private void Start()
+    {
+        dataCtr.OnLoadMorpinos();
     }
     #region Handle Save JSON
     public void OnSaveCreep(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.creeplingOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -22,7 +28,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveAra(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.araOnscreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -30,7 +36,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveTerror(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.terrorOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -38,7 +44,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveDraki(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.drakiOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -46,7 +52,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveMega(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.megaOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -54,7 +60,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSavePrima(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.primaOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -62,7 +68,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveGigant(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.gigantOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -70,7 +76,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveTerra(int[] array)
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         data.terraOnScreen = array;
 
         string json = JsonUtility.ToJson(data, true);
@@ -78,8 +84,8 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnSaveStruct(int order, int amount)
     {
-        MorpinosData data = new MorpinosData();
-        if(order == 0)
+        MorpinosData data = Load();
+        if (order == 0)
         {
             data.imperatosOnScreen = amount;
         }
@@ -96,7 +102,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void OnReset()
     {
-        MorpinosData data = new MorpinosData();
+        MorpinosData data = Load();
         int[]a = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         data.creeplingOnScreen = a;
         int[]b = { 0, 0, 0, 0, 0 };
