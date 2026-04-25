@@ -37,6 +37,8 @@ public class DataSC : MonoBehaviour
     [HideInInspector] public int pGigan0, pGigan1, pGigan2;
     [HideInInspector] public int pStructHive, pStructEssensePool, pSructMoneyMine;
 
+    [HideInInspector] public int pEggBonusRate, pEggBonusAmount, pCoinBonusVaue;
+
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -84,20 +86,9 @@ public class DataSC : MonoBehaviour
         PlayerPrefs.SetInt("PatrolDailyStreak", 0);
 
         //Gameplay
-        PlayerPrefs.SetInt("TotalBattleFight", 0);
-        PlayerPrefs.SetInt("TotalBattleWin", 0);
-        PlayerPrefs.SetInt("LongestMatch", 0);
-        PlayerPrefs.SetInt("HigestArcadeWave", 0);
-        PlayerPrefs.SetInt("HighestUnitBought", 0);
-        PlayerPrefs.SetInt("HighestEnemyKilled", 0);
-
-        PlayerPrefs.SetString("ClanName", "");
-        PlayerPrefs.SetInt("CurrentStoryLevel", 0);
-
-        PlayerPrefs.SetInt("GreenPlayTime", 0);
-        PlayerPrefs.SetInt("RedPlayTime", 0);
-        PlayerPrefs.SetInt("PalePlayTime", 0);
-        PlayerPrefs.SetInt("EbonyPlayTime", 0);
+        PlayerPrefs.SetInt("BonusAmount", 0);
+        PlayerPrefs.SetInt("BonusRate", 0);
+        PlayerPrefs.SetInt("BonusCointValue", 0);
 
         Invoke("LoadOldPlayer", 3f); //De tam thoi
     }
@@ -112,9 +103,13 @@ public class DataSC : MonoBehaviour
         //Patrol Reward
         pLastDailyClaim = PlayerPrefs.GetString("LastPatrolDailyTime");
         pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimDaily"); //0 = allow, 1 = deny
-         pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
+        pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
 
         //Gameplay
+        pEggBonusAmount = PlayerPrefs.GetInt("BonusAmount");
+        pEggBonusRate = PlayerPrefs.GetInt("BonusRate");
+        pCoinBonusVaue = PlayerPrefs.GetInt("BonusCointValue");
+
         InvokeRepeating(nameof(AutoSaveMorpinos), 60f, 60f);
     }
     public void OnLoadMorpinos()
@@ -227,6 +222,21 @@ public class DataSC : MonoBehaviour
     }
 
     //Gameplay
+    public void UpdateBonusSpawnRate(int amount)
+    {
+        PlayerPrefs.SetInt("BonusRate", 0);
+        pEggBonusRate = PlayerPrefs.GetInt("BonusRate");
+    }
+    public void UpdateBonusSpawnAmount(int amount)
+    {
+        PlayerPrefs.SetInt("BonusAmount", 0);
+        pEggBonusAmount = PlayerPrefs.GetInt("BonusAmount");
+    }
+    public void UpdateBonusCoinValue(int amount)
+    {
+        PlayerPrefs.SetInt("BonusCointValue", 0);
+        pCoinBonusVaue = PlayerPrefs.GetInt("BonusCointValue");
+    }
 
     #endregion
 

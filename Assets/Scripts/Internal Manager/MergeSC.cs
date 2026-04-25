@@ -28,11 +28,13 @@ public class MergeSC : MonoBehaviour
     [SerializeField] GameObject essensePool;
     private Vector3 spawnPos;
     int pairedCount, curPower;
+    float spawnRateDelay;
     void Start()
     {
+        spawnRateDelay = 5f;
         genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
         dataSC = GameObject.Find("GenMN").GetComponent<DataSC>();
-        InvokeRepeating(nameof(SpawnEggCreepling), 0f, 5f);
+        InvokeRepeating(nameof(SpawnEggCreepling), 0f, spawnRateDelay);
         pairedCount = 0;
 
         SpawnOnInit();
@@ -43,7 +45,31 @@ public class MergeSC : MonoBehaviour
         tempPosX = Random.Range(-5, 5);
         tempPosY = Random.Range(-3, 3);
         spawnPos = new Vector3(tempPosX, tempPosY, 0);
-        Instantiate((prefEggCreep[0]), spawnPos, Quaternion.identity);
+        if (genCtr.isBoostRate == false || genCtr.isBoostAmount == true)
+        {
+            //Boost amount + nonRate
+            Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x - 0.25f,spawnPos.y, 0) , Quaternion.identity);
+            Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x + 0.25f, spawnPos.y, 0), Quaternion.identity);
+        }
+        else if (genCtr.isBoostRate == true || genCtr.isBoostAmount == false)
+        {
+            //Boost rate + nonAmount
+            if (spawnRateDelay != 2f) spawnRateDelay = 2f;
+            Instantiate((prefEggCreep[0]), spawnPos, Quaternion.identity);
+        }
+        else if (genCtr.isBoostRate == true || genCtr.isBoostAmount == true)
+        {
+            //Boost amount + boost rate
+            if (spawnRateDelay != 2f) spawnRateDelay = 2f;
+            Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x - 0.25f, spawnPos.y, 0), Quaternion.identity);
+            Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x + 0.25f, spawnPos.y, 0), Quaternion.identity);
+        }
+        else if(genCtr.isBoostRate == false || genCtr.isBoostAmount == false)
+        {
+            //Non boost
+            if (spawnRateDelay == 2f) spawnRateDelay = 5f;
+            Instantiate((prefEggCreep[0]), spawnPos, Quaternion.identity);
+        }
     }
     private void SpawnOnInit()
     {
