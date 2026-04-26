@@ -65,12 +65,12 @@ public class SettingSC : MonoBehaviour
             case 0:
                 soundOnImg.gameObject.SetActive(true);
                 soundOffImg.gameObject.SetActive(false);
-                soundTheme.MuteTheme();
+                //soundTheme.MuteTheme();
                 break;
             case 1:
                 soundOnImg.gameObject.SetActive(false);
                 soundOffImg.gameObject.SetActive(true);
-                soundTheme.PlayTheme();
+                //soundTheme.PlayTheme();
                 break;
         }
 
@@ -79,12 +79,12 @@ public class SettingSC : MonoBehaviour
             case 0:
                 sfxOnImg.gameObject.SetActive(true);
                 sfxOffImg.gameObject.SetActive(false);
-                soundSFX.MuteSFX();
+                //soundSFX.MuteSFX();
                 break;
             case 1:
                 sfxOnImg.gameObject.SetActive(false);
                 sfxOffImg.gameObject.SetActive(true);
-                soundSFX.PlaySFX();
+                //soundSFX.PlaySFX();
                 break;
         }
     }

@@ -70,6 +70,8 @@ public class GenControlSC : MonoBehaviour
         countdownSpawnAmount = dataCtr.pEggBonusAmount;
         countdownCoinValueBoost = dataCtr.pCoinBonusVaue;
 
+        print("countdownSpawnAmount = " + countdownSpawnAmount);
+
         if (countdownSpawnRate > 0)
         {
             InvokeRepeating(nameof(OnCountDownSpawnRate), 0f, 1f);
@@ -79,6 +81,7 @@ public class GenControlSC : MonoBehaviour
 
         if (countdownSpawnAmount > 0)
         {
+            print("in countdownSpawnAmount > 0");
             InvokeRepeating(nameof(OnCountDownSpawnAmount), 0f, 1f);
             isBoostAmount = true;
         }
