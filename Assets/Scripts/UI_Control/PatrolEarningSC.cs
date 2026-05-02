@@ -77,10 +77,11 @@ public class PatrolEarningSC : MonoBehaviour
                         rewardBtn[i].GetComponent<Button>().interactable = false;
                     }
 
-                    for(int j = streakDaily; j > rewardBtn.Count; j--) 
+                    for(int j = streakDaily+1; j > rewardBtn.Count; j++) 
                     {
                         rewardBtn[j].GetComponent<Button>().interactable = false;
                     }
+                    rewardBtn[streakDaily].GetComponent<Button>().interactable = true;
 
                     isAllowDailyClaim = false;
                 }

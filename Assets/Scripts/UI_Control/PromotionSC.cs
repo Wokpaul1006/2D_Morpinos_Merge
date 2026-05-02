@@ -12,4 +12,10 @@ public class PromotionSC : MonoBehaviour
     {
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.TerraInAction&pcampaignid=web_share");
     }
+    public void OnToMorpinosMerge(){
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.TerraInAction&pcampaignid=web_share");
+    }
+    public void OnToAgeOfCkauz(){
+Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.TerraInAction&pcampaignid=web_share");
+    }
 }
