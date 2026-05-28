@@ -114,7 +114,6 @@ public class DataSC : MonoBehaviour
     }
     public void OnLoadMorpinos()
     {
-        print("in Load of Data");
         MorpinosData dataLoad = saveSys.Load();
 
         pCreep0 = dataLoad.creeplingOnScreen[0];
