@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PromotionSC : MonoBehaviour
 {
+    public void OnToGames(int index)
+    {
         switch (index)
         {
             case 0:
@@ -28,15 +30,15 @@ public class PromotionSC : MonoBehaviour
                 break;
             case 5:
                 //Castle Defender
-                Application.OpenURL("https://play.google.com/store/apps/developer?id=Sadek+Games+Studio");
+                Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.AgeOfCkauz&pcampaignid=web_share");
                 break;
             case 6:
                 //Idle Shooter
-                Application.OpenURL("https://play.google.com/store/apps/developer?id=Sadek+Games+Studio");
+                Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.OrbitalFighter&pcampaignid=web_share");
                 break;
             case 7:
-                //Weapon Smith
-                Application.OpenURL("https://play.google.com/store/apps/developer?id=Sadek+Games+Studio");
+                //Tank Destroyer
+                Application.OpenURL("https://play.google.com/store/apps/details?id=com.SDSoft.TerraInAction&pcampaignid=web_share");
                 break;
             case 8:
                 //Alien Merge

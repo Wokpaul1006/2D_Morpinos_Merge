@@ -44,6 +44,7 @@ public class PatrolEarningSC : MonoBehaviour
         rewardText[4].text = "160";
         rewardText[5].text = "320";
         rewardText[6].text = "640";
+        rewardText[7].text = "1024";
     }
 
     #region Handle Claim Daily

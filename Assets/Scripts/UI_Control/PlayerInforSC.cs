@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerInforSC : MonoBehaviour
 {
-    [SerializeField] Text pName, pStrenght, pPlanetConquer, pMoney, pGems;
+    [SerializeField] Text pName, pStrenght, pMoney, pGems;
     [HideInInspector] DataSC data;
     private void Awake()
     {
@@ -13,9 +13,8 @@ public class PlayerInforSC : MonoBehaviour
     }
     private void OnEnable()
     {
-        pName.text = "Morpinos Swarm";
+        pName.text = "Alien Farm";
         pStrenght.text = data.pTotalScore.ToString();
-        pPlanetConquer.text = 0.ToString();
         pMoney.text = data.pCoin.ToString();
         pGems.text = data.pGems.ToString();
     }
