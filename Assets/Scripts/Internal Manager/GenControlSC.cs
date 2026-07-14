@@ -35,6 +35,23 @@ public class GenControlSC : MonoBehaviour
         curPower = dataCtr.pTotalScore;
         menuCtr.OnUpdateCurPowerUI(curPower);
     }
+    public void IncreaseCurEco(int type, int value)
+    {
+        switch (type)
+        {
+            case 0:
+                int tempCoin;
+                tempCoin = dataCtr.pCoin + value;
+                dataCtr.UpdateTotalCoin(tempCoin);
+                break;
+            case 1:
+                int tempDiamond;
+                tempDiamond = dataCtr.pGems + value;
+                dataCtr.UpdateTotalGem(tempDiamond);
+                break;
+        }
+        menuCtr.OnUpdateUI();
+    }
     public void OnAssistElements(int sceneOrder)
     {
         if (sceneOrder == 1)

@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe42c15cc9212647b13aeaad224a97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poops: {fileID: 1446520158432768604, guid: 8522a332cc8e09643ae2c96aa76083a0, type: 3}
   nextStraitToSpawn: {fileID: 2136864897948053808, guid: 98fe9379d1253684fae77348b4cc5b76, type: 3}

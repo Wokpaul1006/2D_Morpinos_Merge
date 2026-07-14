@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MorpinosSC : MonoBehaviour
 {
+    [SerializeField] GameObject poops;
     internal MergeSC mergeCtr;
     Vector3 mousePos;
     internal string morpinosName, morpinosStrait;
@@ -23,7 +25,6 @@ public class MorpinosSC : MonoBehaviour
         prepairWalk++;
         if (prepairWalk >= delayWalk)
         {
-            DoAnim();
             WalkAround();
             prepairWalk = 0;
         }
@@ -46,8 +47,13 @@ public class MorpinosSC : MonoBehaviour
 
             targetToMove.x = Random.Range(minPos.x, maxPos.x);
             targetToMove.y = Random.Range(minPos.y, maxPos.y);
-            gameObject.transform.position = targetToMove;
+            transform.DOMove(targetToMove, 0.5f);
             gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, 0);
+
+            if(isRandPoop() >= 3)
+            {
+                Instantiate(poops, gameObject.transform.position, Quaternion.identity);
+            }
         }
     }
     internal void OnMouseDown()
@@ -70,6 +76,9 @@ public class MorpinosSC : MonoBehaviour
         {
             gameObject.transform.localScale = originScale;
         }
-
+    }
+    internal int isRandPoop()
+    {
+        return Random.Range(0, 10);
     }
 }
