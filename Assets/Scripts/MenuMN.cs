@@ -28,6 +28,7 @@ public class MenuMN : MonoBehaviour
     public void HidePanel(int panelOrder) => uiPanels[panelOrder].gameObject.SetActive(false);
     public void OnShowPanel(int panelOrder) => uiPanels[panelOrder].gameObject.SetActive(true);
     public void OnCallShowSetting() => genCtr.OnShowSetting(true);
+    public void OnShowPlayerInfor() => genCtr.OnShowInfor(true);
     public void OnUpdateCurPowerUI(int value)
     {
         curPower.text = value.ToString();

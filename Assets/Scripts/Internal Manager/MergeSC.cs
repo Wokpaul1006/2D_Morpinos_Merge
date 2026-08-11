@@ -42,18 +42,22 @@ public class MergeSC : MonoBehaviour
     private void SpawnEggCreepling()
     {
         int tempPosX, tempPosY;
-        tempPosX = Random.Range(-5, 5);
-        tempPosY = Random.Range(-3, 3);
+        tempPosX = Random.Range(-3, 3);
+        tempPosY = Random.Range(-5, 5);
         spawnPos = new Vector3(tempPosX, tempPosY, 0);
+
+        print("countdownSpawnAmount = " + genCtr.isBoostAmount);
 
         if (genCtr.isBoostRate == false && genCtr.isBoostAmount == true)
         {
+            print("in Rate false, Amount true");
             //Boost amount + nonRate
             Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x - 0.25f,spawnPos.y, 0) , Quaternion.identity);
             Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x + 0.25f, spawnPos.y, 0), Quaternion.identity);
         }
         else if (genCtr.isBoostRate == true && genCtr.isBoostAmount == false)
         {
+            print("in Rate true, Amount fales");
 
             //Boost rate + nonAmount
             if (spawnRateDelay != 2f) spawnRateDelay = 2f;
@@ -62,6 +66,7 @@ public class MergeSC : MonoBehaviour
         else if (genCtr.isBoostRate == true && genCtr.isBoostAmount == true)
         {
             //Boost amount + boost rate
+            print("in Rate true, Amount true");
 
             if (spawnRateDelay != 2f) spawnRateDelay = 2f;
             Instantiate((prefEggCreep[0]), new Vector3(spawnPos.x - 0.25f, spawnPos.y, 0), Quaternion.identity);
@@ -70,6 +75,7 @@ public class MergeSC : MonoBehaviour
         else if(genCtr.isBoostRate == false && genCtr.isBoostAmount == false)
         {
             //Non boost
+            print("in Rate false, Amount false");
 
             if (spawnRateDelay == 2f) spawnRateDelay = 5f;
             Instantiate((prefEggCreep[0]), spawnPos, Quaternion.identity);
@@ -290,4 +296,5 @@ public class MergeSC : MonoBehaviour
     {
         genCtr.IncreaseCurEco(1, value);
     }
+    public void OnSpawnEggFromShop(int eggOrder) => Instantiate(prefEggCreep[eggOrder], Vector3.zero, Quaternion.identity);
 }

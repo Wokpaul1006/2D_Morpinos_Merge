@@ -110,7 +110,7 @@ public class DataSC : MonoBehaviour
         pEggBonusRate = PlayerPrefs.GetInt("BonusRate");
         pCoinBonusVaue = PlayerPrefs.GetInt("BonusCointValue");
 
-        InvokeRepeating(nameof(AutoSaveMorpinos), 60f, 60f);
+        InvokeRepeating(nameof(AutoSaveMorpinos), 0, 30f);
     }
     public void OnLoadMorpinos()
     {

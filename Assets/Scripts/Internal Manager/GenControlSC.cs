@@ -7,13 +7,15 @@ public class GenControlSC : MonoBehaviour
 {
     [HideInInspector] public string today;
     [HideInInspector] MenuMN menuCtr;
-    [HideInInspector] ConquerSC conquerCtr;
 
     [SerializeField] DataSC dataCtr;
     [SerializeField] SettingSC settingCtr;
     [SerializeField] PlayerInforSC inforCtr;
     [SerializeField] CreditSC credtCr;
     [SerializeField] SceneSC sceneCtr;
+    [HideInInspector] SoundSC soundMN;
+    [HideInInspector] MainThemeSC mainThemeMN;
+    [HideInInspector] RatingSC ratePnl;
 
     public bool isBoostAmount, isBoostRate, isBoostCoin;
     int countdownSpawnRate, countdownSpawnAmount, countdownCoinValueBoost;
@@ -27,6 +29,7 @@ public class GenControlSC : MonoBehaviour
         OnShowCredits(false);
         OnShowInfor(false);
         CheckBoostingEffect();
+        //Invoke(nameof(ShowRatePnl), 600f);
     }
 
     public void IncreaseCurPower()
@@ -35,45 +38,32 @@ public class GenControlSC : MonoBehaviour
         curPower = dataCtr.pTotalScore;
         menuCtr.OnUpdateCurPowerUI(curPower);
     }
-    public void IncreaseCurEco(int type, int value)
-    {
-        switch (type)
-        {
-            case 0:
-                int tempCoin;
-                tempCoin = dataCtr.pCoin + value;
-                dataCtr.UpdateTotalCoin(tempCoin);
-                break;
-            case 1:
-                int tempDiamond;
-                tempDiamond = dataCtr.pGems + value;
-                dataCtr.UpdateTotalGem(tempDiamond);
-                break;
-        }
-        menuCtr.OnUpdateUI();
-    }
     public void OnAssistElements(int sceneOrder)
     {
         if (sceneOrder == 1)
         {
             Invoke(nameof(AssistMenuCtr), 1f);
-        }else if(sceneOrder == 2)
-        {
-            Invoke(nameof(AssistConquerCtr), 1f);
         }
     }
+
     private void AssistMenuCtr() 
     {
         menuCtr = GameObject.Find("CAN_MainCan").GetComponent<MenuMN>();
         menuCtr.OnUpdateCurPowerUI(curPower);
     }
-    private void AssistConquerCtr()
+    private void ShowRatePnl() => ratePnl.gameObject.SetActive(true);
+    public void OnShowSetting(bool isShow)
     {
-        conquerCtr = GameObject.Find("ConquerMN").GetComponent<ConquerSC>(); 
+        settingCtr.gameObject.SetActive(isShow);
     }
-    public void OnShowSetting(bool isShow) => settingCtr.gameObject.SetActive(isShow);
-    public void OnShowInfor(bool isShow) => inforCtr.gameObject.SetActive(isShow);
-    public void OnShowCredits(bool isShow) => credtCr.gameObject.SetActive(isShow);
+    public void OnShowInfor(bool isShow) 
+    {
+        inforCtr.gameObject.SetActive(isShow);
+    }
+    public void OnShowCredits(bool isShow) 
+    {
+        credtCr.gameObject.SetActive(isShow);
+    } 
     public void OnGoesToHatchery() => sceneCtr.LoadScene(1);
     public void OnGoesToConquer() => sceneCtr.LoadScene(2);
     
@@ -87,8 +77,6 @@ public class GenControlSC : MonoBehaviour
         countdownSpawnAmount = dataCtr.pEggBonusAmount;
         countdownCoinValueBoost = dataCtr.pCoinBonusVaue;
 
-        print("countdownSpawnAmount = " + countdownSpawnAmount);
-
         if (countdownSpawnRate > 0)
         {
             InvokeRepeating(nameof(OnCountDownSpawnRate), 0f, 1f);
@@ -98,7 +86,6 @@ public class GenControlSC : MonoBehaviour
 
         if (countdownSpawnAmount > 0)
         {
-            print("in countdownSpawnAmount > 0");
             InvokeRepeating(nameof(OnCountDownSpawnAmount), 0f, 1f);
             isBoostAmount = true;
         }
@@ -131,5 +118,22 @@ public class GenControlSC : MonoBehaviour
         dataCtr.UpdateBonusSpawnRate(countdownCoinValueBoost);
         if (countdownCoinValueBoost <= 0) isBoostCoin = false;
         CancelInvoke(nameof(OnCountdownCoinValue));
+    }
+    public void IncreaseCurEco(int type, int value)
+    {
+        switch (type)
+        {
+            case 0:
+                int tempCoin;
+                tempCoin = dataCtr.pCoin + value;
+                dataCtr.UpdateTotalCoin(tempCoin);
+                break;
+            case 1:
+                int tempDiamond;
+                tempDiamond = dataCtr.pGems + value;
+                dataCtr.UpdateTotalGem(tempDiamond);
+                break;
+        }
+        menuCtr.OnUpdateUI();
     }
 }

@@ -121,6 +121,7 @@ public class SaveSystem : MonoBehaviour
     {
         if (File.Exists(path))
         {
+            print("in loaded");
             string json = File.ReadAllText(path);
             return JsonUtility.FromJson<MorpinosData>(json);
         }

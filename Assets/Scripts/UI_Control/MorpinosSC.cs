@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
 public class MorpinosSC : MonoBehaviour
 {
-    [SerializeField] GameObject poops;
+    [SerializeField] internal GameObject poops;
     internal MergeSC mergeCtr;
     Vector3 mousePos;
     internal string morpinosName, morpinosStrait;
@@ -39,18 +38,18 @@ public class MorpinosSC : MonoBehaviour
         {
             curPos = gameObject.transform.position;
 
-            minPos.x = -5;
-            maxPos.x = 5;
+            minPos.x = -4.5f;
+            maxPos.x = 4.5f;
 
-            minPos.y = -3;
-            minPos.y = 3;
+            minPos.y = -6;
+            minPos.y = 6;
 
             targetToMove.x = Random.Range(minPos.x, maxPos.x);
             targetToMove.y = Random.Range(minPos.y, maxPos.y);
-            transform.DOMove(targetToMove, 0.5f);
+            transform.DOMove(targetToMove, 1f);
             gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, 0);
 
-            if(isRandPoop() >= 3)
+            if (isRandPoop() >= 5)
             {
                 Instantiate(poops, gameObject.transform.position, Quaternion.identity);
             }
@@ -66,17 +65,6 @@ public class MorpinosSC : MonoBehaviour
         transform.position = new Vector3(mousePos.x, mousePos.y, transform.position.z);
     }
     internal void OnMouseUp() { isAllowWalk = true; }
-
-    internal void DoAnim()
-    {
-        Vector3 originScale;
-        originScale = gameObject.transform.localScale;
-        gameObject.transform.localScale = new Vector3(originScale.x - (originScale.x*0.01f), originScale.y, 0); 
-        if(prepairWalk >= 50f)
-        {
-            gameObject.transform.localScale = originScale;
-        }
-    }
     internal int isRandPoop()
     {
         return Random.Range(0, 10);
